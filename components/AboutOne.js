@@ -22,40 +22,15 @@ class AboutOne extends Component {
                 <img src="assets/images/circle-stripe.png" className="about-one__circle" alt="" />
                     <div className="container text-center">
                         <div className="block-title text-center">
-                            <h2 className="block-title__title">Let’s do study with <br />
-                                expert teachers</h2>
+                            <h2 className="block-title__title">Ulusal Çevre Bilimleri Araştırma Dergisi </h2>
                         </div>
-                        <div className="about-one__img">
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <img src="assets/images/about-2-1.jpg" alt="" />
-                                </div>
-                                <div className="col-lg-6">
-                                    <img src="assets/images/about-2-2.jpg" alt="" />
-                                </div>
-                            </div>
-                            <div className="about-one__review">
-                                <p className="about-one__review-count counter">
-                                    <VisibilitySensor onChange={this.onVisibilityChange} offset={{top:10}} delayedCall><CountUp end={this.state.startCounter ? 88750 : 0} /></VisibilitySensor>
-                                </p>
-                                <div className="about-one__review-stars">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                </div>
-                                <p className="about-one__review-text">students loved us</p>
-                            </div>
-                        </div>
-                        <p className="about-one__text">There are many variations of passages of lorem ipsum available, but
-                            the majority have
+
+                        <p className="about-one__text">UCBAD (Ulusal Çevre Bilimleri Araştırma Dergisi), su kirliliği, atık su kirliliği, hava kirliliği, katı atık yönetimi, biyoteknoloji, toprak kirliliği, yüzey ve yer altı suları, yenilenebilir enerji, enerji yönetimi, mikrobiyoloji, sürdürülebilirlik, atık geri kazanım ve dönüşüm, bulanık mantık ve yapay sinir ağları gibi birçok alanda çevre araştırmacıları için önde gelen bir dergidir.
+
                             <br />
-                                suffered alteration in some form, by injected humour words which don't look even
-                                slightly <br /> believable.
-                                Lorem
-                                Ipsn gravida nibh vel velit auctor aliquetn auci elit cons.</p>
-                        <a href="#" className="thm-btn about-one__btn">Start Learning Now</a>
+                            Dergi yüksek kaliteli makaleler için uygundur. Özellikle orijinal araştırmalar, üst seviye derleme makaleler ve kaliteli teknik notları yayınlamaktan memnuniyet duyarız.
+                        </p>
+                        <a href="https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new" className="thm-btn about-one__btn">Makale Gönder</a>
                     </div>
             </section>
         );

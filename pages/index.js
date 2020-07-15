@@ -13,26 +13,19 @@ import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
 import CallToActionFour from "../components/CallToActionFour";
 import SubscribeOne from "../components/SubscribeOne";
-
+import AboutOne from "../components/AboutOne";
 
 
 const HomePage = () => (
 
     <Layout pageTitle="Kipso - React Next Online Education Learning & LMS Template">
-      <Topbar />
-      <NavOne />
-      <SliderOne />
-      <AboutTwo />
-      <CourseOne />
-      <VideoTwo />
-      <CountdownKipso />
-      <CourseCatOne />
-      <CallToActionThree />
-      <BrandsTwo />
-      <BlogTwo />
-      <CallToActionFour />
-      <SubscribeOne />
-      <Footer />
+        <Topbar/>
+        <NavOne/>
+        <AboutOne/>
+        <CourseOne/>
+        <AboutTwo/>
+        <SubscribeOne/>
+        <Footer/>
     </Layout>
 
 )

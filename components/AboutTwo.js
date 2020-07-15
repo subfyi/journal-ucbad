@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
 export default class AboutTwo extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
             startCounter: false
@@ -21,50 +21,46 @@ export default class AboutTwo extends Component {
             <section className="about-two">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-6">
-                            <div className="about-two__content">
-                                <div className="block-title text-left">
-                                    <h2 className="block-title__title">Welcome to online <br />
-                                        learning center</h2>
-                                </div>
-                                <p className="about-two__text">There are many variations of passages of lorem ipsum
-                                    available but the
-                                    majority have suffered alteration in some form by injected humour or randomised
-                                    words which
-                                    don't look.</p>
-                                <div className="about-two__single-wrap">
+                        <div className="col-xl-12">
+                            <div className="about-one__about-page">
+                                <div className="about-one__text">
                                     <div className="about-two__single">
                                         <div className="about-two__single-icon">
                                             <i className="kipso-icon-professor"></i>
                                         </div>
                                         <div className="about-two__single-content">
-                                            <p className="about-two__single-text">Start learning from
-                                                our experts</p>
+                                            <p className="about-two__single-text">
+                                                Hızlı Yayın</p>
+                                            <p>
+                                                Online gönderi, eş zamanlı hakem değerlendirmesi, makalenin yayınlanmasını basit ve verimli bir şekilde gerçekleştirir.
+                                            </p>
                                         </div>
                                     </div>
+                                    <br/>
+                                    <div className="about-two__single">
+                                        <div className="about-two__single-icon">
+                                            <i className="kipso-icon-email"></i>
+                                        </div>
+                                        <div className="about-two__single-content">
+                                            <p className="about-two__single-text"> Online Gönderme Sistemi</p>
+                                            <p>
+                                                Etkili, kolay ve kullanıcı dostu çevrim içi gönderme sistemi, gönderimden yayınlamaya kadar olan zamanı azaltır.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
                                     <div className="about-two__single">
                                         <div className="about-two__single-icon">
                                             <i className="kipso-icon-knowledge"></i>
                                         </div>
                                         <div className="about-two__single-content">
-                                            <p className="about-two__single-text">Enhance your skills
-                                                with us now</p>
+                                            <p className="about-two__single-text">Sınırsız Alan İmkânı</p>
+                                            <p>
+                                                Çevrimiçi yayın, rakamlar, kapsamlı veri ve yüksek çözünürlükte resimler için sınırsız alan anlamına gelir.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" className="thm-btn">Learn More</a>
-                            </div>
-                        </div>
-                        <div className="col-xl-6 d-flex justify-content-xl-end justify-content-sm-center">
-                            <div className="about-two__image">
-                                <span className="about-two__image-dots"></span>
-                                <img src="/assets/images/about-1-1.jpg" alt="" />
-                                    <div className="about-two__count">
-                                        <div className="about-two__count-text">Trusted by
-                                            <span className="counter">
-                                                <VisibilitySensor onChange={this.onVisibilityChange} offset={{top:10}} delayedCall><CountUp end={this.state.startCounter ? 4890 : 0} /></VisibilitySensor>
-                                            </span></div>
-                                    </div>
                             </div>
                         </div>
                     </div>

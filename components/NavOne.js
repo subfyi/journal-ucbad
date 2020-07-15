@@ -14,8 +14,6 @@ class NavOne extends Component {
         //Mobile Menu
         this.mobileMenu();
 
-        //Search Toggle
-        this.serachButton();
     }
 
     componentWillUnmount() {
@@ -26,7 +24,7 @@ class NavOne extends Component {
 
       if (window.scrollY > 70) {
         this.setState({
-            sticky: true
+            sticky: false
         });
       } else if (window.scrollY < 70) {
         this.setState({
@@ -78,10 +76,7 @@ class NavOne extends Component {
                                 </a>
                             </Link>
                             <div className="header__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
                                 <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
                             </div>
                             <button className="menu-toggler">
                                 <span className="kipso-icon-menu"></span>
@@ -90,19 +85,7 @@ class NavOne extends Component {
                         <div className="main-navigation">
                             <ul className=" navigation-box">
                                 <li className="current">
-                                    <Link href="/"><a>Home</a></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/"><a>Home 01</a></Link></li>
-                                        <li><Link href="/index-2"><a>Home 02</a></Link></li>
-                                        <li><Link href="/index-3"><a>Home 03</a></Link></li>
-                                        <li><a href="#">Header Versions</a>
-                                            <ul className="sub-menu">
-                                                <li><Link href="/"><a>Header 01</a></Link></li>
-                                                <li><Link href="/index-2"><a>Header 02</a></Link></li>
-                                                <li><Link href="/index-3"><a>Header 03</a></Link></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    <Link href="/"><a>Anasayfa</a></Link>
                                 </li>
                                 <li>
                                     <a href="#">Pages</a>
@@ -114,14 +97,14 @@ class NavOne extends Component {
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/courses">Courses</a>
+                                    <a href="/courses">Ciltler</a>
                                     <ul className="sub-menu">
                                         <li><Link href="/courses"><a>Courses</a></Link></li>
                                         <li><Link href="/course-details"><a>Courses Details</a></Link></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <Link href="/teachers"><a>Teachers</a></Link>
+                                    <Link href="/teachers"><a>Editör Kurulu</a></Link>
                                     <ul className="sub-menu">
                                         <li><Link href="/teachers"><a>Teachers</a></Link></li>
                                         <li><Link href="/teacher-details"><a>Teachers Details</a></Link></li>
@@ -129,21 +112,16 @@ class NavOne extends Component {
                                     </ul>
                                 </li>
                                 <li>
-                                    <Link href="/news"><a>News</a></Link>
+                                    <Link href="/news"><a>Dergi Hakkında</a></Link>
                                     <ul className="sub-menu">
                                         <li><Link href="/news"><a>News Page</a></Link></li>
                                         <li><Link href="/news-details"><a>News Details</a></Link></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <Link href="/contact"><a>Contact</a></Link>
+                                    <Link href="/contact"><a>İletişim</a></Link>
                                 </li>
                             </ul>
-                        </div>
-                        <div className="right-side-box">
-                            <a className="header__search-btn search-popup__toggler search-toggle" href="#"><i
-                                className="kipso-icon-magnifying-glass"></i>
-                            </a>
                         </div>
                     </div>
                 </nav>
