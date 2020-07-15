@@ -15,7 +15,11 @@ const Footer = () => {
                                     <div className="footer-widget footer-widget__contact">
                                         <ul className="list-unstyled footer-widget__course-list">
                                             <li>
-                                                <h2>Sıklık</h2>
+                                                <h2>Başlangıç</h2>
+                                                <p>2018</p>
+                                            </li>
+                                            <li>
+                                                <h2>Yayın Aralığı</h2>
                                                 <p>yılda 4 sayı</p>
                                             </li>
                                             <li>
@@ -28,6 +32,10 @@ const Footer = () => {
                                 <div className="col-xl-4 col-lg-6 col-sm-12">
                                     <div className="footer-widget footer-widget__contact">
                                         <ul className="list-unstyled footer-widget__course-list">
+                                            <li>
+                                                <h2>e-ISSN</h2>
+                                                <p>2636-7483</p>
+                                            </li>
                                             <li>
                                                 <h2>Website</h2>
                                                 <p>https://ucbad.com</p>
@@ -47,7 +55,7 @@ const Footer = () => {
                                         <p className="footer-widget__text">Ulusal Çevre Bilimleri Araştırma Dergisi, 2018'den bu yana her üç ayda bir yayınlanan hakemli dergidir.
                                         </p>
                                         <div className="footer-widget__btn-block">
-                                            <a href="#" className="thm-btn">Ciltler</a>
+                                            <a href="/volumes" className="thm-btn">Ciltler</a>
                                             <a href="/contact" className="thm-btn">İletişim</a>
                                         </div>
                                     </div>

@@ -88,35 +88,13 @@ class NavOne extends Component {
                                     <Link href="/"><a>Anasayfa</a></Link>
                                 </li>
                                 <li>
-                                    <a href="#">Pages</a>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/about"><a>About Page</a></Link></li>
-                                        <li><Link href="/gallery"><a>Gallery</a></Link></li>
-                                        <li><Link href="/pricing"><a>Pricing Plans</a></Link></li>
-                                        <li><Link href="/faq"><a>FAQ'S</a></Link></li>
-                                    </ul>
+                                    <a href="/volumes">Ciltler</a>
                                 </li>
                                 <li>
-                                    <a href="/courses">Ciltler</a>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/courses"><a>Courses</a></Link></li>
-                                        <li><Link href="/course-details"><a>Courses Details</a></Link></li>
-                                    </ul>
+                                    <Link href="/teacher-details"><a>Editör Kurulu</a></Link>
                                 </li>
                                 <li>
-                                    <Link href="/teachers"><a>Editör Kurulu</a></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/teachers"><a>Teachers</a></Link></li>
-                                        <li><Link href="/teacher-details"><a>Teachers Details</a></Link></li>
-                                        <li><Link href="/become-teacher"><a>Become Teacher</a></Link></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <Link href="/news"><a>Dergi Hakkında</a></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/news"><a>News Page</a></Link></li>
-                                        <li><Link href="/news-details"><a>News Details</a></Link></li>
-                                    </ul>
+                                    <Link href="/teachers"><a>Amaç ve Kapsam</a></Link>
                                 </li>
                                 <li>
                                     <Link href="/contact"><a>İletişim</a></Link>

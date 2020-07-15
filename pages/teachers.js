@@ -12,7 +12,6 @@ const TeachersPage = () => {
             <NavOne />
             <PageHeader title="Teachers" />
             <Teachers />
-            <CallToActionTwo />
             <Footer />
         </Layout>
     );

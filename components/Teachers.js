@@ -1,155 +1,55 @@
 import React from 'react';
-import Link from 'next/link';
 
 const Teachers = () => {
     return (
-        <section className="team-one team-page">
+        <section className="team-details">
             <div className="container">
-                <div className="row">
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-1.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Adelaide Hunter</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
+                <div className="row justify-content-between">
+                    <div className="col-lg-12">
+                        <div className="team-details__content">
+                            <h3 className="team-details__subtitle">Amaç ve Kapsam</h3>
+                            <p>
+                                Ulusal Çevre Bilimleri Araştırma Dergisi, deneysel ve teorik açıdan gözden geçirilmiş özgün araştırma makalelerini aşağıdaki alanlarda yayınlayan ulusal bir dergidir:
+                                  </p>
+                            <hr/>
+                            <h3 className="team-details__subtitle">Kapsam</h3>
+                            <ul>
+                                <li>
+                                    Belediye ve Endüstriyel Katı Atıklar</li><li>
+                                    Atık Bertarafı ve Yönetimi</li><li>
+                                    Çevre Kirliliği</li><li>
+                                    Çevresel Modellemesi</li><li>
+                                    Çevresel Yazılım</li><li>
+                                    Çevre Bilimi</li><li>
+                                    Çevresel Eğitim</li><li>
+                                    Çevre Kimyası</li><li>
+                                    Çevresel Mikrobiyoloji</li><li>
+                                    Çevresel Sağlık</li><li>
+                                    Biyokütle, Tarımsal Kalıntılar</li><li>
+                                    Ekoloji</li><li>
+                                    Yenilenebilir Enerji Kaynakları</li><li>
+                                    Tehlikeli Emisyonlar, Yakma</li><li>
+                                    Çevresel Koruma Konuları, Deneysel, Analitik, Endüstriyel Çalışmalar</li><li>
+                                    Hidrolojik Geri Dönüşüm</li><li>
+                                    İçme Suyu Arıtımı</li><li>
+                                    Atıksu Arıtma</li><li>
+                                    Hava Kirliliği</li><li>
+                                    Gaz Bertarafı</li><li>
+                                    Gürültü Kirliliği ve Kontrolü</li><li>
+                                    Çevre Bilimlerinde Bulanık Mantık</li><li>
+                                    Yapay Sinir Ağları</li><li>
+                                    Deprem Çevresel Etkileri
+                            </li>
+                            </ul>
+
+                            <p>Çevre yönetimi ve hava, su ve arazi kaynaklarının kullanımı ile ilgili diğer konularda da yayın kabul edilmektedir.
+
+                            </p>
+
+
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-2.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Christina Newman</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-3.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Gilbert Daniels</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-4.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Austin Caldwell</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-5.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Phoebe Park</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-6.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Matilda Hawkins</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-7.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Lizzie Butler</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-1-8.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><Link href="/teacher-details"><a>Trevor Turner</a></Link></h2>
-                                <p className="team-one__designation">Teacher</p>
-                                <p className="team-one__text">There are many varia of passages of lorem.</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

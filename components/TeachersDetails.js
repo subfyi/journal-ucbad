@@ -5,76 +5,165 @@ const TeachersDetails = () => {
         <section className="team-details">
             <div className="container">
                 <div className="row justify-content-between">
-                    <div className="col-lg-5">
+                    <div className="col-lg-12">
                         <div className="team-details__content">
-                            <h2 className="team-details__title">Read my story</h2>
-                            <p className="team-details__text">Lorem Ipsum is simply dummy text of the printing and type
-                                industry.
-                                Lorem Ipsum has been the standard dummy text ever since the when an unknown was
-                                popularised. It
-                                has survived not only five centuries, but also the leap into electronic typesetting
-                                remaining
-                                unchanged.</p>
-                            <h3 className="team-details__subtitle">Certificate</h3>
-                            <ul className="list-unstyled team-details__certificate-list">
-                                <li>
-                                    <img src="/assets/images/certificate-1-1.png" alt="" />
-                                </li>
-                                <li>
-                                    <img src="/assets/images/certificate-1-2.png" alt="" />
-                                </li>
-                            </ul>
+                            <h3 className="team-details__subtitle">EDİTÖR</h3>
+                            <p>
+                                Dr. Şükrü Dursun
+                                <br/>
+                                Konya Teknik Üniversitesi
+                                <br/>
+                                Çevre Mühendisliği Bölümü, Mühendislik ve Doğa Bilimleri Fakültesi
+                                <br/>
+                                Konya, Türkiye
+                                <br/>
+                            </p>
+                            <hr/>
+                            <h3 className="team-details__subtitle">EDİTORYAL DANIŞMA KURULU</h3>
+                            <p>
+                                Dr. Bahtiyar Öztürk
+                                <br/>
+                                Ondokuz Mayıs Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Samsun, Türkiye
+                            </p>
+                            <p>
+                                Dr. Bilal Tunçsiper
+                                <br/>
+                                Niğde Ömer Halisdemir Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Niğde, Türkiye
+                            </p>
+                            <p>
+                                Dr. Çiğdem Çiftçi
+                                <br/>
+                                Necmettin Erbakan Üniversitesi / Mühendislik ve Mimarlık Fakültesi
+                                <br/>
+                                Konya, Türkiye
+                            </p>
+                            <p>
+                                Dr. Delia Teresa Sponza
+                                <br/>
+                                Dokuz Eylül Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                İzmir, Türkiye
+                            </p>
+                            <p>
+                                Dr. Durmuş Kaya
+                                <br/>
+                                Kocaeli Üniversitesi / Teknoloji Fakültesi
+                                <br/>
+                                Kocaeli, Türkiye
+                            </p>
+                            <p>
+                                Dr. Fatma Çanka Kılıç
+                                <br/>
+                                Kocaeli Üniversitesi / Teknoloji Fakültesi
+                                <br/>
+                                Kocaeli, Türkiye
+                            </p>
+                            <p>
+                                Dr. Filiz Nuran Acar
+                                <br/>
+                                Atatürk Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Erzurum, Türkiye
+                            </p>
+                            <p>
+                                Dr. Güray Çelik Salihoğlu
+                                <br/>
+                                Uludağ Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Bursa, Türkiye
+                            </p>
+                            <p>
+                                Dr. Hüseyin Toros
+                                <br/>
+                                İstanbul Teknik Üniversitesi / Uçak ve Uzay Bilimleri Fakültesi
+                                <br/>
+                                İstanbul, Türkiye
+                            </p>
+                            <p>
+                                Dr. Kübra Yazıcı
+                                <br/>
+                                Gaziosmanpasa Üniversitesi / Ziraat Fakültesi
+                                <br/>
+                                Tokat, Türkiye
+                            </p>
+                            <p>
+                                Dr. Mehmet Emin Argun
+                                <br/>
+                                Konya Teknik Üniversitesi / Mühendislik ve Doğa Bilimleri Fakültesi
+                                <br/>
+                                Konya, Türkiye
+                            </p>
+                            <p>
+                                Dr. Mehmet Kılıç
+                                <br/>
+                                Süleyman Demirel Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Isparta, Türkiye
+                            </p>
+                            <p>
+                                Dr. Mustafa Işık
+                                <br/>
+                                Aksaray Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Aksaray, Türkiye
+                            </p>
+                            <p>
+                                Dr. Nilgün Balkaya
+                                <br/>
+                                İstanbul Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                İstanbul, Türkiye
+                            </p>
+                            <p>
+                                Dr. Nevim Genç
+                                <br/>
+                                Kocaeli Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Kocaeli, Türkiye
+                            </p>
+                            <p>
+                                Dr. Osman Nuri Ağdağ
+                                <br/>
+                                Pamukkale Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Denizli, Türkiye
+                            </p>
+                            <p>
+                                Dr. Simge Bardak Denerel
+                                <br/>
+                                Yakın Doğu Üniversitesi / Mühendislik ve Mimarlık Fakültesi
+                                <br/>
+                                Lefkoşa, KKTC
+                            </p>
+                            <p>
+                                Dr. Yağmur Uysal
+                                <br/>
+                                Mersin Üniversitesi / Mühendislik Fakültesi
+                                <br/>
+                                Mersin , Türkiye
+                                <br/>
+                            </p>
+                            <hr/>
+                            <h3 className="team-details__subtitle">EDİTÖR YARDIMCISI</h3>
+                            <p>
+                                Ms. Zeynep Cansu Ayturan
+                                <br/>
+                                Konya Teknik Üniversitesi
+                                <br/>
+                                Çevre Mühendisliği Bölümü, Mühendislik ve Doğa Bilimleri Fakültesi
+                                <br/>
+                                Konya, Türkiye
+                                <br/>
+                            </p>
 
-                            <div className="progress-one__wrap">
-                                <div className="progress-one__single">
-                                    <div className="progress-one__top">
-                                        <h3 className="progress-one__title">English</h3>
-                                        <h3 className="progress-one__percent"><span className="counter">98</span>%
-                                        </h3>
-                                    </div>
-                                    <div className="progress-one__bar">
-                                        <span style={{width: `98%`}} className="wow slideInLeft"></span>
-                                    </div>
-                                </div>
-                                <div className="progress-one__single">
-                                    <div className="progress-one__top">
-                                        <h3 className="progress-one__title">French</h3>
-                                        <h3 className="progress-one__percent"><span className="counter">64</span>%
-                                        </h3>
-                                    </div>
-                                    <div className="progress-one__bar">
-                                        <span style={{width: `64%`}} className="wow slideInLeft"></span>
-                                    </div>
-                                </div>
-                                <div className="progress-one__single">
-                                    <div className="progress-one__top">
-                                        <h3 className="progress-one__title">Spanish</h3>
-                                        <h3 className="progress-one__percent"><span className="counter">34</span>%</h3>
-                                    </div>
-                                    <div className="progress-one__bar">
-                                        <span style={{width: `34%`}} className="wow slideInLeft"></span>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-                    <div className="col-lg-6">
-                        <div className="team-one__single">
-                            <div className="team-one__image">
-                                <img src="/assets/images/team-d-1.jpg" alt="" />
-                            </div>
-                            <div className="team-one__content">
-                                <h2 className="team-one__name"><a href="team-details.html">Adelaide Hunter</a></h2>
-                                <p className="team-one__designation">Teacher</p>
-                            </div>
-                            <div className="team-one__social">
-                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i className="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

@@ -22,9 +22,7 @@ const HomePage = () => (
         <Topbar/>
         <NavOne/>
         <AboutOne/>
-        <CourseOne/>
         <AboutTwo/>
-        <SubscribeOne/>
         <Footer/>
     </Layout>
 
