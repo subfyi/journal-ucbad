@@ -17,11 +17,11 @@ module.exports = phase => {
 
     config.env.ENDPOINT = phase === PHASE_DEVELOPMENT_SERVER ?
         'http://localhost:8000' :
-        'https://api.telefonvertrag.de';
+        'https://api.ucbad.com';
 
     config.env.DOMAIN = phase === PHASE_DEVELOPMENT_SERVER ?
         'http://localhost:3000' :
-        'https://demo.telefonvertrag.de';
+        'https://ucbad.com';
 
     config.env.DEV = phase === PHASE_DEVELOPMENT_SERVER ? true : false;
 

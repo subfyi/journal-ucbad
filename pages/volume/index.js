@@ -36,6 +36,8 @@ export default class YearList extends React.Component {
             <PageHeader title="Ciltler" />
             <Courses
                 year={year}
+                posters={posters}
+                orals={orals}
             />
             <Footer />
         </Layout>);
