@@ -5,6 +5,7 @@ import PageHeader from "../../../../../../../components/PageHeader";
 import CourseDetails from "../../../../../../../components/CourseDetails";
 import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../../../api";
+import Faq from "../../../../../../../components/Faq";
 
 export default class Courses extends React.Component {
     state = {}
@@ -16,9 +17,12 @@ export default class Courses extends React.Component {
     }
 
     static async getInitialProps() {
-        var volumes = await api("/api/submission?page=1&itemPerPage=-1");
+        var articles = await api("/api/submission?page=1&itemPerPage=-1");
         return {
-            volumes: volumes
+            articles: articles,
+            volume: 2,
+            issue: 3,
+            years: 2019,
         };
     }
 
@@ -30,7 +34,9 @@ export default class Courses extends React.Component {
                 <NavOne />
                 <PageHeader title="Cilt 3 Sayı 2 Makale 1" />
                 <CourseDetails
-                    volumes={volumes}
+                    articles={articles}
+                    volume={volume}
+                    issue={issue}
                 />
             </Layout>);
     }

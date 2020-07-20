@@ -10,7 +10,7 @@ const CourseDetails = (props) => {
 
                             <div className="course-details__top">
                                 <div className="course-details__top-left">
-                                    <h2 className="course-details__title">{datas.tr_title}
+                                    <h2 className="course-details__title">{articles.tr_title}
                                     </h2>
                                 </div>
                             </div>
@@ -20,7 +20,7 @@ const CourseDetails = (props) => {
                         <div className="course-details__content">
 
                             <p className="course-details__author">
-                                Yazar(lar): {datas.authors.map((author, index) =>
+                                Yazar(lar): {articles.authors.map((author, index) =>
                                 <a href="#">{author.name} {author.surname}<sup>{index + 1}</sup>,{" "}
                                 </a>
                             )}
@@ -40,55 +40,37 @@ const CourseDetails = (props) => {
                             <div className="tab-content course-details__tab-content ">
                                 <div className="tab-pane show active  animated fadeInUp" role="tabpanel" id="overview">
 
-                                    <h3 className="course-details__title">{datas.en_title}
+                                    <h3 className="course-details__title">{articles.en_title}
                                     </h3>
                                     <p className="course-details__tab-text">
-                                        {datas.tr_abstract}
+                                        {articles.tr_abstract}
 
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
-                                        Anahtar Kelime(ler): {(datas.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
+                                        Anahtar Kelime(ler): {(articles.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
                                     <p className="course-details__tab-text">
-                                        {datas.en_abstract}
+                                        {articles.en_abstract}
 
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
-                                        Keyword(s): {(datas.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
+                                        Keyword(s): {(articles.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="review">
 
                                     <ul className="course-details__curriculum-list list-unstyled">
-                                        <li>
-                                            <div className="course-details__curriculum-list-left">
-                                                Kampa, M. ve Castanas, E, 2008. Human health effects of air pollution, Environmental Pollution, 151, 362-367.
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="course-details__curriculum-list-left">
-                                                Kampa, M. ve Castanas, E, 2008. Human health effects of air pollution, Environmental Pollution, 151, 362-367.
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="course-details__curriculum-list-left">
-                                                Kampa, M. ve Castanas, E, 2008. Human health effects of air pollution, Environmental Pollution, 151, 362-367.
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="course-details__curriculum-list-left">
-                                                Kampa, M. ve Castanas, E, 2008. Human health effects of air pollution, Environmental Pollution, 151, 362-367.
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="course-details__curriculum-list-left">
-                                                Kampa, M. ve Castanas, E, 2008. Human health effects of air pollution, Environmental Pollution, 151, 362-367.
-                                            </div>
-                                        </li>
+                                        {articles.citetions.map((citation, index) =>
+                                            <li>
+                                                <div className="course-details__curriculum-list-left">
+                                                    [{index + 1}] {citation.raw}
+                                                </div>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                             </div>
@@ -132,11 +114,11 @@ const CourseDetails = (props) => {
                                         Dergisi, 3(2), 52-57. Geliş tarihi gönderen https://ucbad.com/ucbad/article/view/volume-3-issue-2-article-5
 
 
-                                        {datas.authors
+                                        {articles.authors
                                             .map(a => a.surname + ", " + a.name.split(' ').map(a => a[0]).join('. ') + ".")
                                             .join(" & ")
-                                        }. ({year}, {smonths[year]}). {datas.pap_title}. International Symposium for Environmental Science and Engineering Research (ISESER{year}),
-                                        pp. {datas.paper_page}, Turkey.
+                                        }. ({year}, {smonths[year]}). {articles.pap_title}. International Symposium for Environmental Science and Engineering Research (ISESER{year}),
+                                        pp. {articles.paper_page}, Turkey.
                                     </p>
 
                                 </div>
