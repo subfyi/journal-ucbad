@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CourseDetails = () => {
+const CourseDetails = (props) => {
     return (
         <section className="course-details">
             <div className="container">
@@ -10,7 +10,7 @@ const CourseDetails = () => {
 
                             <div className="course-details__top">
                                 <div className="course-details__top-left">
-                                    <h2 className="course-details__title">Engelli Turizm Potansiyelinin Değerlendirilmesi; Dünya ve Türkiye Örnekleri
+                                    <h2 className="course-details__title">{datas.tr_title}
                                     </h2>
                                 </div>
                             </div>
@@ -20,7 +20,10 @@ const CourseDetails = () => {
                         <div className="course-details__content">
 
                             <p className="course-details__author">
-                                Yazar(lar): <a href="#">Funda ÜNAL ANKAYA</a>, <a href="#">Bahriye GÜLGÜN ASLAN</a>
+                                Yazar(lar): {datas.authors.map((author, index) =>
+                                <a href="#">{author.name} {author.surname}<sup>{index + 1}</sup>,{" "}
+                                </a>
+                            )}
                             </p>
 
                             <ul className="course-details__tab-navs list-unstyled nav nav-tabs" role="tablist">
@@ -36,22 +39,27 @@ const CourseDetails = () => {
                             </ul>
                             <div className="tab-content course-details__tab-content ">
                                 <div className="tab-pane show active  animated fadeInUp" role="tabpanel" id="overview">
+
+                                    <h3 className="course-details__title">{datas.en_title}
+                                    </h3>
                                     <p className="course-details__tab-text">
-                                        Turizm, kişilerin dinlenmek, eğlenmek, görmek ve tanımak gibi amaçlarla bir ülkede veya bir bölgede geçici konaklamalarla yapılan, kültürel ve ekonomik
-                                        faaliyetlerin tümüne denir. Dünya Sağlık Örgütü verilerine göre, 7 milyardan fazla olan dünya nüfusunun, 1 milyardan fazlasında çeşitli engellilik durumu
-                                        bulunmaktadır. TÜİK verilerine göre Türkiye’de nüfusun yaklaşık 10 milyonu engelli bireylerden oluşmaktadır. Çağdaş toplumlarda, tüm bireyler, eşit olarak bu
-                                        tür faaliyetlere katılma hakkına sahiptir. Küresel bir sektör olan turizmin, içinde yer alan “Engelli Turizm” kavramının gerek Dünya’da gerekse Türkiye’de
-                                        ekonomik yönden güçlenmesi için gelişmeye ihtiyacı vardır. Bu çalışmada; engellilik sınıflandırılması, engelli turizminin ölçütleri, Dünya’daki ve Türkiye’deki
-                                        engelli turizm potansiyel durumu incelenmiş ve öneriler getirilmiştir.
+                                        {datas.tr_abstract}
 
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
-                                        Anahtar Kelime(ler): Engelli Turizmi, Engellilik, Turizm Katkıları, Dünya, Türkiye
+                                        Anahtar Kelime(ler): {(datas.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
+                                    <p className="course-details__tab-text">
+                                        {datas.en_abstract}
 
+                                    </p>
+                                    <br/><br/>
+                                    <p className="course-details__author">
+                                        Keyword(s): {(datas.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
+                                    </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="review">
 
@@ -123,6 +131,12 @@ const CourseDetails = () => {
                                         Funda ÜNAL ANKAYA, & Bahriye GÜLGÜN ASLAN. (2020). Engelli Turizm Potansiyelinin Değerlendirilmesi; Dünya ve Türkiye Örnekleri. Ulusal Çevre Bilimleri Araştırma
                                         Dergisi, 3(2), 52-57. Geliş tarihi gönderen https://ucbad.com/ucbad/article/view/volume-3-issue-2-article-5
 
+
+                                        {datas.authors
+                                            .map(a => a.surname + ", " + a.name.split(' ').map(a => a[0]).join('. ') + ".")
+                                            .join(" & ")
+                                        }. ({year}, {smonths[year]}). {datas.pap_title}. International Symposium for Environmental Science and Engineering Research (ISESER{year}),
+                                        pp. {datas.paper_page}, Turkey.
                                     </p>
 
                                 </div>
