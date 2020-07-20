@@ -5,24 +5,42 @@ import PageHeader from "../../../../../components/PageHeader";
 import Footer from "../../../../../components/Footer";
 import Faq from "../../../../../components/Faq";
 import {useRouter} from "next/router";
+import SimpleReactValidator from "simple-react-validator";
+import api from "../../../../../api";
+import Courses from "../../../../../components/Courses";
 
-const FaqPage = (props) => {
-    console.log(arguments);
+export default class YearList extends React.Component {
+    state = {}
 
-    const router = useRouter();
-    const { id, issue } = router.query;
+    constructor(props) {
+        super(props)
 
-    return (
-        <Layout pageTitle="Kipso | FAQ">
-            <NavOne />
-            <PageHeader title="Cilt 3 Sayı ii (2020)" />
+        this.validator = new SimpleReactValidator()
+    }
 
-            Volume: { id }
-            Issue: { issue }
-            <Faq/>
-            <Footer />
-        </Layout>
-    );
-};
+    static async getInitialProps() {
+        var articles = await api("/api/submission?page=1&itemPerPage=-1");
+        return {
+            articles: articles,
+            volume: 2,
+            issue: 3,
+            years: 2019,
+        };
+    }
 
-export default FaqPage;
+    render() {
+        const {articles, volume, issue, years} = this.props;
+
+        return (
+            <Layout pageTitle="Kipso | FAQ">
+                <NavOne/>
+                <PageHeader title={"Cilt " + volume + " Sayı " + issue + " (" + years + ")"}/>
+                <Faq
+                    articles={articles}
+                    volume={volume}
+                    issue={issue}
+                />
+                <Footer/>
+            </Layout>);
+    }
+}

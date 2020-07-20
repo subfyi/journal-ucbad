@@ -7,7 +7,6 @@ import Courses from "../../components/Courses";
 import SimpleReactValidator from 'simple-react-validator'
 import api from '../../api'
 
-
 export default class YearList extends React.Component {
     state = {}
 
@@ -17,27 +16,22 @@ export default class YearList extends React.Component {
         this.validator = new SimpleReactValidator()
     }
 
-    static async getInitialProps({query}) {
-        var posters = await api("/api/submission?page=1&itemPerPage=-1&query=&sort=id&desc=false&posters=1&year=" + query.id);
-        var orals = await api("/api/submission?page=1&itemPerPage=-1&query=&sort=id&desc=false&orals=1&year=" + query.id);
+    static async getInitialProps() {
+        var volumes = await api("/api/submission?page=1&itemPerPage=-1");
         return {
-            posters,
-            orals,
-            year: query.id
+            volumes: volumes
         };
     }
 
     render() {
-        const {orals, posters, year} = this.props;
+        const {volumes} = this.props;
 
     return (
         <Layout pageTitle="Ciltler | UCBAD">
             <NavOne />
             <PageHeader title="Ciltler" />
             <Courses
-                year={year}
-                posters={posters}
-                orals={orals}
+                volumes={volumes}
             />
             <Footer />
         </Layout>);
