@@ -17,9 +17,10 @@ export default class YearList extends React.Component {
     }
 
     static async getInitialProps() {
-        var volumes = await api("/api/submission?page=1&itemPerPage=-1");
+        var volumes = await api("/api/volumes?page=1&itemPerPage=-1");
         return {
-            volumes: volumes
+            articles: volumes,
+            years: 2019,
         };
     }
 
@@ -32,6 +33,7 @@ export default class YearList extends React.Component {
             <PageHeader title="Ciltler" />
             <Courses
                 volumes={volumes}
+                years={years}
             />
             <Footer />
         </Layout>);

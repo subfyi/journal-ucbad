@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const Courses = (props) => {
+    const {articles, volume, issue, years, article} = props;
     return (
         <section className="course-one course-page">
             <div className="container">
