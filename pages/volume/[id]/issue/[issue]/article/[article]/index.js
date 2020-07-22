@@ -16,18 +16,23 @@ export default class Courses extends React.Component {
         this.validator = new SimpleReactValidator()
     }
 
-    static async getInitialProps() {
-        var articles = await api("/api/submission?page=1&itemPerPage=-1");
+    static async getInitialProps({ query }) {
+        var articles = await api("/api/submission?page=1&itemPerPage=-1&volume=" + query.id + "&issue=" + query.issue+ "&article=" + query.article);
         return {
-            articles: articles,
-            volume: 2,
-            issue: 3,
+            articles: articles.data[0],
+            volume: query.id,
+            issue: query.issue,
+            article: query.article,
             years: 2019,
         };
     }
 
     render() {
-        const {volumes} = this.props;
+        const {articles, volume, issue, years, article} = this.props;
+
+        if (!articles) {
+            return <div>404</div>
+        }
 
         return (
             <Layout pageTitle="Kipso | FAQ">
@@ -37,6 +42,8 @@ export default class Courses extends React.Component {
                     articles={articles}
                     volume={volume}
                     issue={issue}
+                    article={article}
+                    years={years}
                 />
             </Layout>);
     }

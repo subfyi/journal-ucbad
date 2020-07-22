@@ -18,12 +18,12 @@ export default class YearList extends React.Component {
         this.validator = new SimpleReactValidator()
     }
 
-    static async getInitialProps() {
-        var articles = await api("/api/submission?page=1&itemPerPage=-1");
+    static async getInitialProps({ query }) {
+        var articles = await api("/api/submission?page=1&itemPerPage=-1&volume=" + query.id + "&issue=" + query.issue);
         return {
             articles: articles,
-            volume: 2,
-            issue: 3,
+            volume: query.id,
+            issue: query.issue,
             years: 2019,
         };
     }

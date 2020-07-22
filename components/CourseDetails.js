@@ -1,6 +1,8 @@
 import React from 'react';
 
 const CourseDetails = (props) => {
+    const {articles, volume, issue, years, article} = props;
+
     return (
         <section className="course-details">
             <div className="container">
@@ -12,6 +14,8 @@ const CourseDetails = (props) => {
                                 <div className="course-details__top-left">
                                     <h2 className="course-details__title">{articles.tr_title}
                                     </h2>
+                                    <small><h5 className="">{articles.en_title}
+                                    </h5></small>
                                 </div>
                             </div>
                         </div>
@@ -20,8 +24,8 @@ const CourseDetails = (props) => {
                         <div className="course-details__content">
 
                             <p className="course-details__author">
-                                Yazar(lar): {articles.authors.map((author, index) =>
-                                <a href="#">{author.name} {author.surname}<sup>{index + 1}</sup>,{" "}
+                                Yazar(lar): {articles.authors.map((authorin, index) =>
+                                <a href="#">{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{" "}
                                 </a>
                             )}
                             </p>
@@ -40,15 +44,13 @@ const CourseDetails = (props) => {
                             <div className="tab-content course-details__tab-content ">
                                 <div className="tab-pane show active  animated fadeInUp" role="tabpanel" id="overview">
 
-                                    <h3 className="course-details__title">{articles.en_title}
-                                    </h3>
                                     <p className="course-details__tab-text">
                                         {articles.tr_abstract}
 
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
-                                        Anahtar Kelime(ler): {(articles.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
+                                        Anahtar Kelime(ler): {(articles.keywords).filter(a => a.keyword.type == "tr").map(a => <>{a.keyword.value}, </>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
@@ -58,13 +60,13 @@ const CourseDetails = (props) => {
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
-                                        Keyword(s): {(articles.pap_keyword || "").split('|').map(a => <a>{a}</a>)}
+                                        Keyword(s): {(articles.keywords).filter(a => a.keyword.type == "en").map(a => <a>{a.keyword.value}</a>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="review">
 
                                     <ul className="course-details__curriculum-list list-unstyled">
-                                        {articles.citetions.map((citation, index) =>
+                                        {articles.citations.map((citation, index) =>
                                             <li>
                                                 <div className="course-details__curriculum-list-left">
                                                     [{index + 1}] {citation.raw}
@@ -79,21 +81,21 @@ const CourseDetails = (props) => {
                     <div className="col-lg-4">
                         <div className="course-details__price">
                             <p className="course-details__price-text">Tam Metin </p>
-                            <a target="_blank" href="https://dergipark.org.tr/tr/download/article-file/510201" className="thm-btn course-details__price-btn">[PDF]</a>
+                            <a target="_blank" href={articles.files[0]} className="thm-btn course-details__price-btn">[PDF]</a>
                         </div>
 
                         <div className="course-details__meta">
                             <a href="#" className="course-details__meta-link">
-                                Yayınlanmış: <span>2020-03-31</span>
-                            </a>
-                            <a href="#" className="course-details__meta-link">
-                                Yayın: <span>Cilt 3 Sayı 2</span>
-                            </a>
-                            <a href="#" className="course-details__meta-link">
-                                Yıl: <span>2020</span>
-                            </a>
-                            <a href="#" className="course-details__meta-link">
                                 Makale Dili: <span>Türkçe</span>
+                            </a>
+                            <a href="#" className="course-details__meta-link">
+                                Yıl: <span>{years}</span>
+                            </a>
+                            <a href="#" className="course-details__meta-link">
+                                Yayın: <span>{"Cilt " + volume + " Sayı " + issue}</span>
+                            </a>
+                            <a href="#" className="course-details__meta-link">
+                                Yayınlanmış: <span>  {articles.pubdate}</span>
                             </a>
                         </div>
 
@@ -110,15 +112,12 @@ const CourseDetails = (props) => {
                                         Atıf tipi: <span>APA</span>
                                     </a>
                                     <p>
-                                        Funda ÜNAL ANKAYA, & Bahriye GÜLGÜN ASLAN. (2020). Engelli Turizm Potansiyelinin Değerlendirilmesi; Dünya ve Türkiye Örnekleri. Ulusal Çevre Bilimleri Araştırma
-                                        Dergisi, 3(2), 52-57. Geliş tarihi gönderen https://ucbad.com/ucbad/article/view/volume-3-issue-2-article-5
+                                        {articles.authors.map((authorin, index) =>
+                                            <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
+                                        )} .({years}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page} . Retrieved
+                                        from {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
 
 
-                                        {articles.authors
-                                            .map(a => a.surname + ", " + a.name.split(' ').map(a => a[0]).join('. ') + ".")
-                                            .join(" & ")
-                                        }. ({year}, {smonths[year]}). {articles.pap_title}. International Symposium for Environmental Science and Engineering Research (ISESER{year}),
-                                        pp. {articles.paper_page}, Turkey.
                                     </p>
 
                                 </div>

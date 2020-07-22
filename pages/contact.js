@@ -4,6 +4,7 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
+import ContactForm from "../components/ContactForm";
 
 const GalleryPage = () => {
     return (
@@ -11,6 +12,7 @@ const GalleryPage = () => {
             <NavOne />
             <PageHeader title="Contact" />
             <Contact />
+            <ContactForm/>
             <Footer />
         </Layout>
     );
