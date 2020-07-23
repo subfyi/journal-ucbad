@@ -1853,15 +1853,16 @@ a:visited {
 }
 
 .faq-one__single {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 .faq-one__single:hover .faq-one__icon span::before {
   left: 0;
+}
+
+.faq-one__content{
+
 }
 
 .faq-one__icon {
