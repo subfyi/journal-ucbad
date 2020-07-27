@@ -1800,7 +1800,7 @@ a:visited {
   padding-bottom: 70px;
 }
 .faq-one [class*=col-lg-]:nth-child(odd) {
-  padding-right: 76px;
+
 }
 .faq-one [class*=col-lg-]:nth-child(even) {
   border-left: 1px solid #f1f1f1;
@@ -1853,16 +1853,15 @@ a:visited {
 }
 
 .faq-one__single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 .faq-one__single:hover .faq-one__icon span::before {
   left: 0;
-}
-
-.faq-one__content{
-
 }
 
 .faq-one__icon {
@@ -1900,7 +1899,7 @@ a:visited {
   font-size: 24px;
   font-weight: bold;
   color: #012237;
-  margin-bottom: 55px;
+  margin-bottom: 15px;
 }
 
 .faq-one__text {
@@ -1908,8 +1907,7 @@ a:visited {
   line-height: 34px;
   margin: 0;
   color: #81868a;
-  margin-top: -10px;
-  margin-bottom: -10px;
+  margin-bottom: 15px;
 }
 
 /*

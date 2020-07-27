@@ -4,10 +4,8 @@ import NavOne from "../../../../../components/NavOne";
 import PageHeader from "../../../../../components/PageHeader";
 import Footer from "../../../../../components/Footer";
 import Faq from "../../../../../components/Faq";
-import {useRouter} from "next/router";
 import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../api";
-import Courses from "../../../../../components/Courses";
 
 export default class YearList extends React.Component {
     state = {}
@@ -24,17 +22,16 @@ export default class YearList extends React.Component {
             articles: articles,
             volume: query.id,
             issue: query.issue,
-            years: 2019,
         };
     }
 
     render() {
-        const {articles, volume, issue, years} = this.props;
+        const {articles, volume, issue} = this.props;
 
         return (
             <Layout pageTitle="Kipso | FAQ">
                 <NavOne/>
-                <PageHeader title={"Cilt " + volume + " Sayı " + issue + " (" + years + ")"}/>
+                <PageHeader title={"Cilt " + volume + " Sayı " + issue }/>
                 <Faq
                     articles={articles}
                     volume={volume}

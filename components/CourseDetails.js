@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from "moment";
 
 const CourseDetails = (props) => {
     const {articles, volume, issue, years, article} = props;
@@ -95,7 +96,7 @@ const CourseDetails = (props) => {
                                 Yayın: <span>{"Cilt " + volume + " Sayı " + issue}</span>
                             </a>
                             <a href="#" className="course-details__meta-link">
-                                Yayınlanmış: <span>  {articles.pubdate}</span>
+                                Yayınlanmış: <span>  {moment(articles.pubdate).format("DD.MM.YYYY")}</span>
                             </a>
                         </div>
 

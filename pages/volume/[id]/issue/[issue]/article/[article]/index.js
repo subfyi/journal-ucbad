@@ -23,7 +23,6 @@ export default class Courses extends React.Component {
             volume: query.id,
             issue: query.issue,
             article: query.article,
-            years: 2019,
         };
     }
 
@@ -37,13 +36,12 @@ export default class Courses extends React.Component {
         return (
             <Layout pageTitle="Kipso | FAQ">
                 <NavOne />
-                <PageHeader title="Cilt 3 Sayı 2 Makale 1" />
+                <PageHeader title={"Cilt " + volume + " Sayı " + issue+ " Makale " + article }/>
                 <CourseDetails
                     articles={articles}
                     volume={volume}
                     issue={issue}
                     article={article}
-                    years={years}
                 />
             </Layout>);
     }
