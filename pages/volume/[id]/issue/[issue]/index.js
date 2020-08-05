@@ -29,7 +29,7 @@ export default class YearList extends React.Component {
         const {articles, volume, issue} = this.props;
 
         return (
-            <Layout pageTitle="Kipso | FAQ">
+            <Layout pageTitle={"Cilt " + volume + " Sayı " + issue  + " | UCBAD "}>
                 <NavOne/>
                 <PageHeader title={"Cilt " + volume + " Sayı " + issue }/>
                 <Faq

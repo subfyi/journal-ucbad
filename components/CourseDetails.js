@@ -82,7 +82,9 @@ const CourseDetails = (props) => {
                     <div className="col-lg-4">
                         <div className="course-details__price">
                             <p className="course-details__price-text">Tam Metin </p>
-                            <a target="_blank" href={articles.files[0]} className="thm-btn course-details__price-btn">[PDF]</a>
+                            {articles.files.map((file, index) =>
+                                <a target="_blank" href={file.file}className="thm-btn course-details__price-btn">[PDF]</a>
+                            )}
                         </div>
 
                         <div className="course-details__meta">
@@ -90,7 +92,7 @@ const CourseDetails = (props) => {
                                 Makale Dili: <span>Türkçe</span>
                             </a>
                             <a href="#" className="course-details__meta-link">
-                                Yıl: <span>{years}</span>
+                                Yıl: <span>{moment(articles.pubdate).format("YYYY")}</span>
                             </a>
                             <a href="#" className="course-details__meta-link">
                                 Yayın: <span>{"Cilt " + volume + " Sayı " + issue}</span>
@@ -115,7 +117,7 @@ const CourseDetails = (props) => {
                                     <p>
                                         {articles.authors.map((authorin, index) =>
                                             <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
-                                        )} .({years}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page} . Retrieved
+                                        )} .({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page} . Retrieved
                                         from {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
 
 

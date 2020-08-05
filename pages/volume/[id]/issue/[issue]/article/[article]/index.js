@@ -6,6 +6,7 @@ import CourseDetails from "../../../../../../../components/CourseDetails";
 import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../../../api";
 import Faq from "../../../../../../../components/Faq";
+import Footer from "../../../../../../../components/Footer";
 
 export default class Courses extends React.Component {
     state = {}
@@ -34,7 +35,7 @@ export default class Courses extends React.Component {
         }
 
         return (
-            <Layout pageTitle="Kipso | FAQ">
+            <Layout pageTitle={"Cilt " + volume + " Sayı " + issue+ " Makale " + article  + " | UCBAD " }>
                 <NavOne />
                 <PageHeader title={"Cilt " + volume + " Sayı " + issue+ " Makale " + article }/>
                 <CourseDetails
@@ -43,6 +44,7 @@ export default class Courses extends React.Component {
                     issue={issue}
                     article={article}
                 />
+                <Footer/>
             </Layout>);
     }
 }

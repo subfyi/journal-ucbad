@@ -17,13 +17,16 @@ const Faq = (props) => {
                                                 <>  {authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "}</>
                                             )}
                                         </p>
-                                        <a className="btn btn-danger obj_galley_link file" href={"/doc/ucbad-" + row.volume + "-" + row.issue + "-" + row.order_num + ".pdf"}
-                                           aria-labelledby="article-137">
-                                            Tam Metin [PDF]
-                                        </a>
+
                                         <a className="btn btn-outline-dark text-secondary mx-4 ">
                                             Sayfa: {row.first_page}-{row.last_page}
                                         </a>
+                                        {row.files.map((file, index) =>
+                                            <a className="btn btn-danger obj_galley_link file" href={file.file}
+                                                aria-labelledby="article-137">
+                                                Tam Metin [PDF]
+                                            </a>
+                                        )}
                                     </div>
                                 </a></Link>
                             </div>
