@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import Courses from "../../components/Courses";
 import SimpleReactValidator from 'simple-react-validator'
 import api from '../../api'
+import Topbar from "../../components/Topbar";
 
 export default class YearList extends React.Component {
     state = {}
@@ -28,6 +29,7 @@ export default class YearList extends React.Component {
 
     return (
         <Layout pageTitle="Ciltler | UCBAD">
+            <Topbar/>
             <NavOne />
             <PageHeader title="Ciltler" />
             <Courses

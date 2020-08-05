@@ -4,13 +4,14 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Teachers from "../components/Teachers";
-import CallToActionTwo from "../components/CallToActionTwo";
+import Topbar from "../components/Topbar";
 
 const TeachersPage = () => {
     return (
-        <Layout pageTitle="Kipso | Teachers">
+        <Layout pageTitle="Amaç ve Kapsam | UCBAD">
+            <Topbar/>
             <NavOne />
-            <PageHeader title="Teachers" />
+            <PageHeader title="Amaç ve Kapsam" />
             <Teachers />
             <Footer />
         </Layout>

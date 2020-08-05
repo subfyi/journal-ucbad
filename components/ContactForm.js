@@ -47,17 +47,17 @@ export default class ContactForm extends React.Component {
 
     render() {
         return <>
+
             <div className="container mb-5">
                 <hr/>
                 <div className="col-lg-12">
                     <div className="section-heading">
-                        <p className="section__meta">Simply Send Mail</p>
                         <p className="section__desc">
                             <div>
                                 <Row>
                                     <Col md="6">
                                         <FormGroup>
-                                            <Label>Name</Label>
+                                            <Label>İsim Soyisim</Label>
                                             <Validator validator={this.validator} name="Name" value={this.state.data.name} type="required">
                                                 <Input
                                                     type="text"
@@ -75,7 +75,7 @@ export default class ContactForm extends React.Component {
                                     </Col>
                                     <Col md="6">
                                         <FormGroup>
-                                            <Label>E-Mail Adress</Label>
+                                            <Label>E-Mail</Label>
                                             <Validator validator={this.validator} name="E-Mail " value={this.state.data.email}
                                                        type="required|email">
                                                 <Input
@@ -94,7 +94,7 @@ export default class ContactForm extends React.Component {
                                     </Col>
                                 </Row>
                                 <FormGroup>
-                                    <Label>Subject</Label>
+                                    <Label>Konu</Label>
                                     <Validator validator={this.validator} name="Subject" value={this.state.data.title} type="required">
                                         <Input
                                             type="text"
@@ -110,7 +110,7 @@ export default class ContactForm extends React.Component {
                                     </Validator>
                                 </FormGroup>
                                 <FormGroup>
-                                    <Label>Message to us</Label>
+                                    <Label>İçerik</Label>
                                     <Validator validator={this.validator} name="Message to us" value={this.state.data.message} type="required">
                                         <Input
                                             type="textarea"
@@ -133,15 +133,15 @@ export default class ContactForm extends React.Component {
                                     disabled={!!this.state.loading}
                                     onClick={this.handleSubmit.bind(this)}
                                 >
-                                    Send Message
+                                    Gönder
                                 </Button>
 
                                 {(this.state.error && <Alert color="danger" className="mt-2">
                                     <i className="fa fa-exclamation-circle" aria-hidden="true"/>{this.state.error}
                                 </Alert>) || (this.state.success && <Alert color="success" className="mt-2">
-                                    <i className="fa fa-check" aria-hidden="true"/> Thanks for your message!
+                                    <i className="fa fa-check" aria-hidden="true"/> Mesajınız için teşekkürler!
                                 </Alert>) || (this.state.loading && <Alert color="warning" className="mt-2">
-                                    <i className="fa fa-spinner fa-spin" aria-hidden="true"/> Please wait.
+                                    <i className="fa fa-spinner fa-spin" aria-hidden="true"/> Lütfen bekleyiniz.
                                 </Alert>)}
                             </div>
                         </p>

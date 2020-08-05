@@ -72,7 +72,7 @@ const Footer = () => {
                                     className="kipso-icon-top-arrow"></i></div>
 
 
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/ucbad"><i className="fab fa-facebook-square"></i></a>
                             </div>
                         </div>
                     </div>

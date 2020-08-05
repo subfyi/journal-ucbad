@@ -71,12 +71,12 @@ class NavOne extends Component {
                         <div className="logo-box clearfix">
                             <Link href="/">
                                 <a className="navbar-brand">
-                                    <img src="/assets/images/logo-dark.png" className="main-logo" width="128"
-                                         alt="Awesome Image" />
+                                    <img src="/logo_black_500x500.png" className="main-logo" width="100"
+                                         alt="UCBAD" /> <h1>UCBAD</h1>
                                 </a>
                             </Link>
                             <div className="header__social">
-                                <a href="#"><i className="fab fa-facebook-square"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/ucbad"><i className="fab fa-facebook-square"></i></a>
                             </div>
                             <button className="menu-toggler">
                                 <span className="kipso-icon-menu"></span>
@@ -91,10 +91,10 @@ class NavOne extends Component {
                                     <a href="/volumes">Ciltler</a>
                                 </li>
                                 <li>
-                                    <Link href="/teacher-details"><a>Editör Kurulu</a></Link>
+                                    <Link href="/editorial-team"><a>Editör Kurulu</a></Link>
                                 </li>
                                 <li>
-                                    <Link href="/teachers"><a>Amaç ve Kapsam</a></Link>
+                                    <Link href="/aim-and-scope"><a>Amaç ve Kapsam</a></Link>
                                 </li>
                                 <li>
                                     <Link href="/contact"><a>İletişim</a></Link>
