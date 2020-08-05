@@ -7,6 +7,7 @@ import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../../../api";
 import Faq from "../../../../../../../components/Faq";
 import Footer from "../../../../../../../components/Footer";
+import Topbar from "../../../../../../../components/Topbar";
 
 export default class Courses extends React.Component {
     state = {}
@@ -35,7 +36,14 @@ export default class Courses extends React.Component {
         }
 
         return (
-            <Layout pageTitle={"Cilt " + volume + " Sayı " + issue+ " Makale " + article  + " | UCBAD " }>
+            <Layout
+                pageTitle={"Cilt " + volume + " Sayı " + issue+ " Makale " + article  + " | UCBAD " }
+                articles={articles}
+                volume={volume}
+                issue={issue}
+                article={article}
+            >
+                <Topbar/>
                 <NavOne />
                 <PageHeader title={"Cilt " + volume + " Sayı " + issue+ " Makale " + article }/>
                 <CourseDetails

@@ -6,6 +6,7 @@ import Footer from "../../../../../components/Footer";
 import Faq from "../../../../../components/Faq";
 import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../api";
+import Topbar from "../../../../../components/Topbar";
 
 export default class YearList extends React.Component {
     state = {}
@@ -30,6 +31,7 @@ export default class YearList extends React.Component {
 
         return (
             <Layout pageTitle={"Cilt " + volume + " Sayı " + issue  + " | UCBAD "}>
+                <Topbar/>
                 <NavOne/>
                 <PageHeader title={"Cilt " + volume + " Sayı " + issue }/>
                 <Faq

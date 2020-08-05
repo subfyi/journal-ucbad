@@ -2,10 +2,11 @@ import React from 'react';
 import moment from "moment";
 
 const CourseDetails = (props) => {
-    const {articles, volume, issue, years, article} = props;
+    const {articles, volume, issue,  article} = props;
 
     return (
         <section className="course-details">
+
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
@@ -99,6 +100,9 @@ const CourseDetails = (props) => {
                             </a>
                             <a href="#" className="course-details__meta-link">
                                 Yayınlanmış: <span>  {moment(articles.pubdate).format("DD.MM.YYYY")}</span>
+                            </a>
+                            <a href="#" className="course-details__meta-link">
+                                Sayfa: <span>  {articles.first_page}-{articles.last_page}</span>
                             </a>
                         </div>
 
