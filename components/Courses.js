@@ -8,7 +8,7 @@ const Courses = (props) => {
             <div className="container">
                 <div className="row">
                     {props.volumes.data.map((row, i) => <>
-                        <div className="col-lg-4" key={row.id}>
+                        <div className="col-lg-3" key={row.id}>
                             <Link href={"/volume/" + row.volume + "/issue/" + row.issue}><a>
                                 <div className="course-one__single">
                                     <div className="course-one__image">

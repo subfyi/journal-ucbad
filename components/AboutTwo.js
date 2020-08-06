@@ -26,6 +26,18 @@ export default class AboutTwo extends Component {
                                 <div className="about-one__text">
                                     <div className="about-two__single">
                                         <div className="about-two__single-icon">
+                                            <i className="kipso-icon-email"></i>
+                                        </div>
+                                        <div className="about-two__single-content">
+                                            <p className="about-two__single-text"> Online Gönderme Sistemi</p>
+                                            <p>
+                                                Etkili, kolay ve kullanıcı dostu çevrim içi gönderme sistemi, gönderimden yayınlamaya kadar olan zamanı azaltır.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div className="about-two__single">
+                                        <div className="about-two__single-icon">
                                             <i className="kipso-icon-professor"></i>
                                         </div>
                                         <div className="about-two__single-content">
@@ -33,18 +45,6 @@ export default class AboutTwo extends Component {
                                                 Hızlı Yayın</p>
                                             <p>
                                                 Online gönderi, eş zamanlı hakem değerlendirmesi, makalenin yayınlanmasını basit ve verimli bir şekilde gerçekleştirir.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <br/>
-                                    <div className="about-two__single">
-                                        <div className="about-two__single-icon">
-                                            <i className="kipso-icon-email"></i>
-                                        </div>
-                                        <div className="about-two__single-content">
-                                            <p className="about-two__single-text"> Online Gönderme Sistemi</p>
-                                            <p>
-                                                Etkili, kolay ve kullanıcı dostu çevrim içi gönderme sistemi, gönderimden yayınlamaya kadar olan zamanı azaltır.
                                             </p>
                                         </div>
                                     </div>
