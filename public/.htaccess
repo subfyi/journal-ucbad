@@ -19,7 +19,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
  RewriteRule ^editorial-board$ /editorial-team  [R=301,L]
  RewriteRule ^about/editorialTeam$ /editorial-team  [R=301,L]
- RewriteRule ^about/$ /editorial-team  [R=301,L]
 
  RewriteRule ^ciltler$ /volumes  [R=301,L]
  RewriteRule ^sayilar$ /volumes  [R=301,L]
@@ -33,8 +32,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
  RewriteRule ^online-gonderi$ https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new  [R=301,L]
  RewriteRule ^about/submissions$ https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new  [R=301,L]
 
-Redirect 301 /ijepem https://ijepem.com/
+Redirect 301 /about https://ucbad.com/editorial-team
 Redirect 301 /ucbad https://ucbad.com/
+Redirect 301 /ijepem https://ijepem.com/
 
 RewriteRule (.*) http://127.0.0.1:7424/$1 [p]
 
