@@ -126,10 +126,31 @@ const CourseDetails = (props) => {
                                             <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
                                         )} .({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
                                         {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
+                                    </p>
+                                </div>
+                                <div className="course-details__list-content">
 
+                                    <a href="#" className="course-details__meta-link">
+                                        Atıf tipi: <span>BibTex</span>
+                                    </a>
+                                    <p>
+                                        @article{"{"}{moment(articles.pubdate).format("YYYY")}, title={"{"}{articles.tr_title}{"}"}, volume={"{"}{volume}{"}"}, number={"{"}{issue}{"}"}, publisher={"{"}Ulusal Çevre Bilimleri Araştırma Dergisi{"}"}, author={"{"}{articles.authors.map((authorin, index) =>
+                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
+                                    )}{"}"}, year={"{"}{moment(articles.pubdate).format("YYYY")}{"}"}, pages={"{"}{articles.first_page}-{articles.last_page}{"}"} {"}"}
 
                                     </p>
+                                </div>
+                                <div className="course-details__list-content">
 
+                                    <a href="#" className="course-details__meta-link">
+                                        Atıf tipi: <span>MLA</span>
+                                    </a>
+                                    <p>
+                                        {articles.authors.map((authorin, index) =>
+                                            <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
+                                        )}. {articles.tr_title}.  no. {volume} Ulusal Çevre Bilimleri Araştırma Dergisi, ({moment(articles.pubdate).format("YYYY")}), pp. {articles.first_page}-{articles.last_page}.
+
+                                    </p>
                                 </div>
                             </div>
                         </div>
