@@ -112,7 +112,10 @@ const CourseDetails = (props) => {
                     </div>
                     <div className="col-lg-12">
                         <div className="course-details__list">
-                            <div className="course-details__list-item">
+                            <div className="course-details__list-item">  <div className="course-details__price">
+                                <p className="course-details__price-text">KAYNAK GÖSTER </p>
+
+                            </div>
                                 <div className="course-details__list-content">
 
                                     <a href="#" className="course-details__meta-link">
@@ -121,8 +124,8 @@ const CourseDetails = (props) => {
                                     <p>
                                         {articles.authors.map((authorin, index) =>
                                             <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
-                                        )} .({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page} . Retrieved
-                                        from {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
+                                        )} .({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
+                                        {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
 
 
                                     </p>
