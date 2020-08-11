@@ -2,7 +2,7 @@ import React from 'react';
 import moment from "moment";
 
 const CourseDetails = (props) => {
-    const {articles, volume, issue,  article} = props;
+    const {articles, volume, issue, article} = props;
 
     return (
         <section className="course-details">
@@ -84,7 +84,7 @@ const CourseDetails = (props) => {
                         <div className="course-details__price">
                             <p className="course-details__price-text">Tam Metin </p>
                             {articles.files.map((file, index) =>
-                                <a target="_blank" href={file.file}className="thm-btn course-details__price-btn">[PDF]</a>
+                                <a target="_blank" href={file.file} className="thm-btn course-details__price-btn">[PDF]</a>
                             )}
                         </div>
 
@@ -110,48 +110,55 @@ const CourseDetails = (props) => {
                     <div className="col-lg-12">
                         <br/>
                     </div>
-                    <div className="col-lg-12">
-                        <div className="course-details__list">
-                            <div className="course-details__list-item">  <div className="course-details__price">
-                                <p className="course-details__price-text">KAYNAK GÖSTER </p>
 
+                    <div className="col-lg-12 blog-one__content">
+                        <h2 className="course-details__list-title">KAYNAK GÖSTER </h2>
+
+
+                        <div className="course-details__list-item">
+                            <div className="course-details__list-content">
+
+                                <a href="#" className="course-details__meta-link">
+                                    Atıf tipi: <span>APA</span>
+                                </a>
+                                <p>
+                                    {articles.authors.map((authorin, i, arr) =>
+                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length-1) ? ', ' : ''}</>
+                                    )}. ({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma
+                                    Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
+                                    {" "}{"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
+                                </p>
                             </div>
-                                <div className="course-details__list-content">
+                        </div>
 
-                                    <a href="#" className="course-details__meta-link">
-                                        Atıf tipi: <span>APA</span>
-                                    </a>
-                                    <p>
-                                        {articles.authors.map((authorin, index) =>
-                                            <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
-                                        )} .({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
-                                        {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
-                                    </p>
-                                </div>
-                                <div className="course-details__list-content">
+                        <div className="course-details__list-item">
+                            <div className="course-details__list-content">
 
-                                    <a href="#" className="course-details__meta-link">
-                                        Atıf tipi: <span>BibTex</span>
-                                    </a>
-                                    <p>
-                                        @article{"{"}{moment(articles.pubdate).format("YYYY")}, title={"{"}{articles.tr_title}{"}"}, volume={"{"}{volume}{"}"}, number={"{"}{issue}{"}"}, publisher={"{"}Ulusal Çevre Bilimleri Araştırma Dergisi{"}"}, author={"{"}{articles.authors.map((authorin, index) =>
-                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
-                                    )}{"}"}, year={"{"}{moment(articles.pubdate).format("YYYY")}{"}"}, pages={"{"}{articles.first_page}-{articles.last_page}{"}"} {"}"}
+                                <a href="#" className="course-details__meta-link">
+                                    Atıf tipi: <span>BibTex</span>
+                                </a>
+                                <p>
+                                    @article{"{"}{moment(articles.pubdate).format("YYYY")}, title={"{"}{articles.tr_title}{"}"}, volume={"{"}{volume}{"}"}, number={"{"}{issue}{"}"},
+                                    publisher={"{"}Ulusal Çevre Bilimleri Araştırma Dergisi{"}"}, author={"{"}{articles.authors.map((authorin, i, arr) =>
+                                    <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length-1) ? ', ' : ''}</>
+                                )}{"}"}, year={"{"}{moment(articles.pubdate).format("YYYY")}{"}"}, pages={"{"}{articles.first_page}-{articles.last_page}{"}"} {"}"}
 
-                                    </p>
-                                </div>
-                                <div className="course-details__list-content">
+                                </p>
+                            </div>
+                        </div>
+                        <div className="course-details__list-item">
+                            <div className="course-details__list-content">
 
-                                    <a href="#" className="course-details__meta-link">
-                                        Atıf tipi: <span>MLA</span>
-                                    </a>
-                                    <p>
-                                        {articles.authors.map((authorin, index) =>
-                                            <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "} </>
-                                        )}. {articles.tr_title}.  no. {volume} Ulusal Çevre Bilimleri Araştırma Dergisi, ({moment(articles.pubdate).format("YYYY")}), pp. {articles.first_page}-{articles.last_page}.
+                                <a href="#" className="course-details__meta-link">
+                                    Atıf tipi: <span>MLA</span>
+                                </a>
+                                <p>
+                                    {articles.authors.map((authorin, i, arr) =>
+                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length-1) ? ', ' : ''}</>
+                                    )}. {articles.tr_title}. no. {volume} Ulusal Çevre Bilimleri Araştırma Dergisi, ({moment(articles.pubdate).format("YYYY")}),
+                                    pp. {articles.first_page}-{articles.last_page}.
 
-                                    </p>
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
