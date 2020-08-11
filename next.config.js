@@ -25,5 +25,7 @@ module.exports = phase => {
 
     config.env.DEV = phase === PHASE_DEVELOPMENT_SERVER ? true : false;
 
+    config.trailingSlash = true;
+
     return config;
 };
