@@ -18,7 +18,7 @@ export default class YearList extends React.Component {
     }
 
     static async getInitialProps({ query }) {
-        var articles = await api("/api/submission?page=1&itemPerPage=-1&sort=ASC&volume=" + query.id + "&issue=" + query.issue);
+        var articles = await api("/api/submission?page=1&itemPerPage=-1&sort=id&desc=false&volume=" + query.id + "&issue=" + query.issue);
         return {
             articles: articles,
             volume: query.id,

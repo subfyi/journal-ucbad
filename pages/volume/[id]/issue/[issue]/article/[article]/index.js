@@ -19,7 +19,7 @@ export default class Courses extends React.Component {
     }
 
     static async getInitialProps({ query }) {
-        var articles = await api("/api/submission?page=1&itemPerPage=-1&sort=ASC&&volume=" + query.id + "&issue=" + query.issue+ "&article=" + query.article);
+        var articles = await api("/api/submission?page=1&itemPerPage=-1&sort=id&desc=false&&volume=" + query.id + "&issue=" + query.issue+ "&article=" + query.article);
         return {
             articles: articles.data[0],
             volume: query.id,
