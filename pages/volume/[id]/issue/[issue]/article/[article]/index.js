@@ -5,7 +5,6 @@ import PageHeader from "../../../../../../../components/PageHeader";
 import CourseDetails from "../../../../../../../components/CourseDetails";
 import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../../../api";
-import Faq from "../../../../../../../components/Faq";
 import Footer from "../../../../../../../components/Footer";
 import Topbar from "../../../../../../../components/Topbar";
 
