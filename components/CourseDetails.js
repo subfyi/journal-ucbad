@@ -122,11 +122,12 @@ const CourseDetails = (props) => {
                                     Atıf tipi: <span>APA</span>
                                 </a>
                                 <p>
-                                    {articles.authors.map((authorin, i, arr) =>
-                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length-1) ? ', ' : ''}</>
-                                    )}. ({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma
+                                    {articles.authors
+                                        .map(a => a.author.last_name + ", " + a.author.first_name.split(' ').map(a => a[0]).join(', ') + " ")
+                                        .join(" , ")
+                                    }. ({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma
                                     Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
-                                    {" "}{"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
+                                    {" "} Retrieved from {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
                                 </p>
                             </div>
                         </div>
