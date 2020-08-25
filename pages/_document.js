@@ -10,7 +10,7 @@ export default class extends Document {
   render() {
     return (
       <Html lang="tr">
-          <Head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+          <Head>
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           
 
