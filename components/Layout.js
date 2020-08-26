@@ -30,12 +30,12 @@ const Layout = (props) => {
 
                     <link rel="alternate"
                           hrefLang="tr"
-                          href={"/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
+                          href={"https://ucbad.com/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
                           id="link-alternate-tr"
                     />
                     <link rel="alternate"
                           hrefLang="en"
-                          href={"/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
+                          href={"https://ucbad.com/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
                           id="link-alternate-en"
                     />
 
@@ -125,7 +125,7 @@ const Layout = (props) => {
                     <meta name="citation_lastpage" content={articles.last_page}/>
                     <meta
                         name="citation_abstract_html_url"
-                        content={"/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
+                        content={"https://ucbad.com/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
                     />
                     <meta name="citation_language" content="tr"/>
                     <meta
