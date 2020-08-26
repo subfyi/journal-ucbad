@@ -56,6 +56,14 @@ const Layout = (props) => {
                             property="og:url"/>
                     )}
 
+                    {articles.citations.map((citation, index) =>
+                        <meta
+                            name="citation_reference"
+                            content={citation.raw}
+                        />
+                    )}
+
+
                     <meta name="DC.Title"
                           content={articles.tr_title}
                     />
