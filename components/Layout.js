@@ -17,53 +17,95 @@ const Layout = (props) => {
 
 
                 {articles && <>
-
-                    <link
-                        rel="alternate"
-                        hrefLang="tr"
-                        href={"/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
-                        id="link-alternate-tr"
-                    />
-                    <link
-                        rel="alternate"
-                        hrefLang="en"
-                        href={"/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
-                        id="link-alternate-en"
-                    />
                     <base href="/"/>
                     <meta name="generator" content="ucbad.com"/>
-                    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
-                    <meta content="2018-01-02" property="article:modified_time"/>
-                    <meta content="article" property="og:type"/>
+
+
+                    <link rel="schema.DC"
+                          href="http://purl.org/dc/elements/1.1/"/>
+
+                    <meta name="DC.Contributor.Sponsor"
+                          xmlLang="tr"
+                          content/>
+
+                    <link rel="alternate"
+                          hrefLang="tr"
+                          href={"/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
+                          id="link-alternate-tr"
+                    />
+                    <link rel="alternate"
+                          hrefLang="en"
+                          href={"/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
+                          id="link-alternate-en"
+                    />
+
+                    <meta
+                        content={articles.updated_at}
+                        property="article:modified_time"
+                    />
+                    <meta
+                        content="article"
+                        property="og:type"/>
                     <meta
                         content={articles.tr_title}
                         property="og:title"
                     />
                     {articles.files.map((file, index) =>
-                        <meta content={file.file} property="og:url"/>
+                        <meta
+                            content={file.file}
+                            property="og:url"/>
                     )}
 
-                    <meta name="DC.Title" content={articles.tr_title}/>
-                    <meta name="DC.Description" content={articles.tr_abstract}/>
+                    <meta name="DC.Title"
+                          content={articles.tr_title}
+                    />
+                    <meta name="DC.Description"
+                          xmlLang="tr"
+                          content={articles.tr_abstract}/>
                     <meta name="DC.Source" content="Ulusal Çevre Bilimleri Araştırma Dergisi"/>
                     <meta name="DC.Source.Issue" content={issue}/>
                     <meta name="DC.Source.URI" content="https://ucbad.com/"/>
                     <meta name="DC.Source.Volume" content={volume}/>
-                    <meta name="DC.Type" content="Text.Serial.Journal"/>
-                    <meta name="DC.Type.articleType" content="Makaleler"/>
+                    <meta
+                        name="DC.Subject"
+                        xmlLang="tr"
+                        content={(articles.keywords).filter(a => a.keyword.type == "tr").map(a => <>{a.keyword.value}, </>)}
+                    />
+
+                    <meta name="DC.Type"
+                          content="Text.Serial.Journal"/>
+                    <meta name="DC.Type.articleType"
+                          content="article"/>
+                    <meta name="DC.Date.created"
+                          scheme="ISO8601"
+                          content={articles.created_at}/>
+                    <meta name="DC.Date.dateSubmitted"
+                          scheme="ISO8601"
+                          content={moment(articles.submission_date).format("DD-MM-YYYY")}/>
+                    <meta name="DC.Date.issued"
+                          scheme="ISO8601"
+                          content={moment(articles.created_at).format("DD-MM-YYYY")}/>
+                    <meta name="DC.Date.modified"
+                          scheme="ISO8601"
+                          content={articles.updated_at}/>
 
                     {articles.authors.map((authorin, index) =>
                         <meta name="DC.Creator.PersonalName"
                               content={authorin.author.first_name + " " + (authorin.author.middle_name && (authorin.author.middle_name + " ")) + authorin.author.last_name}/>
                     )}
 
-                    <meta name="DC.Identifier" content={446066}/>
+                    <meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+
+                    <meta name="DC.Identifier" content={article.volume + article.issue + article.order_num}/>
                     <meta name="DC.Identifier.pageNumber" content={articles.first_page + "-" + articles.last_page}/>
                     <meta
                         name="DC.Identifier.URI"
                         content={"https://ucbad.com/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
                     />
                     <meta name="DC.Language" content='tr scheme="ISO639-1"'/>
+
+                    <meta name="gs_meta_revision" content="1.1"/>
+
                     <meta
                         name="citation_journal_title"
                         content="Ulusal Çevre Bilimleri Araştırma Dergisi"
@@ -74,6 +116,8 @@ const Layout = (props) => {
                               content={authorin.author.first_name + " " + (authorin.author.middle_name && (authorin.author.middle_name + " ")) + authorin.author.last_name}/>
                     )}
                     <meta name="citation_title" content={articles.tr_title}/>
+
+                    <meta name="citation_date" content={moment(articles.pubdate).format("DD-MM-YYYY")}/>
                     <meta name="citation_publication_date" content={moment(articles.pubdate).format("DD-MM-YYYY")}/>
                     <meta name="citation_volume" content={volume}/>
                     <meta name="citation_issue" content={issue}/>
@@ -86,20 +130,25 @@ const Layout = (props) => {
                     <meta name="citation_language" content="tr"/>
                     <meta
                         name="citation_keywords"
+                        xmlLang="tr"
                         content={(articles.keywords).filter(a => a.keyword.type == "tr").map(a => <>{a.keyword.value}, </>)}
                     />
 
                     {articles.files.map((file, index) =>
-                        <meta name="citation_pdf_url" content={file.file} />
+                        <meta name="citation_pdf_url" content={file.file}/>
                     )}
 
                     <meta
                         id="meta_stats_updated_at"
                         name="stats_updated_at"
-                        content="2020-08-05T08:23:07Z"
+                        content={articles.updated_at}
                     />
 
+                    <meta name="DC.Language" scheme="ISO639-1" content="tr"/>
+                    <meta name="DC.Rights" content="https://ucbad.com/doc/ucbad-telif-hakki-formu.pdf"/>
+
                 </>}
+
                 <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png"/>
                 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png"/>
                 <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png"/>
@@ -127,16 +176,12 @@ const Layout = (props) => {
                 <link rel="stylesheet" href="/assets/css/responsive.css"/>
 
             </Head>
-
             <div className="page-wrapper">
-
                 {props.children}
-
             </div>
 
             <script src="/assets/plugins/bootstrap/jquery.min.js"></script>
             <script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
-
         </div>
     );
 }
