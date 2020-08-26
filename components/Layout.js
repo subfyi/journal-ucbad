@@ -30,12 +30,12 @@ const Layout = (props) => {
 
                     <link rel="alternate"
                           hrefLang="tr"
-                          href={"/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
+                          href={"/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
                           id="link-alternate-tr"
                     />
                     <link rel="alternate"
                           hrefLang="en"
-                          href={"/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
+                          href={"/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
                           id="link-alternate-en"
                     />
 
@@ -96,11 +96,11 @@ const Layout = (props) => {
 
                     <meta name="DC.Format" scheme="IMT" content="application/pdf"/>
 
-                    <meta name="DC.Identifier" content={article.volume + article.issue + article.order_num}/>
+                    <meta name="DC.Identifier" content={articles.volume + articles.issue + articles.order_num}/>
                     <meta name="DC.Identifier.pageNumber" content={articles.first_page + "-" + articles.last_page}/>
                     <meta
                         name="DC.Identifier.URI"
-                        content={"https://ucbad.com/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
+                        content={"https://ucbad.com/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
                     />
                     <meta name="DC.Language" content='tr scheme="ISO639-1"'/>
 
@@ -125,7 +125,7 @@ const Layout = (props) => {
                     <meta name="citation_lastpage" content={articles.last_page}/>
                     <meta
                         name="citation_abstract_html_url"
-                        content={"/volume/" + article.volume + "/issue/" + article.issue + "/article/" + article.order_num}
+                        content={"/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}
                     />
                     <meta name="citation_language" content="tr"/>
                     <meta
