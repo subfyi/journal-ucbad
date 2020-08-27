@@ -58,7 +58,7 @@ const Layout = (props) => {
 
                     {articles.citations.map((citation, index) =>
                         <meta
-                            name="citation_reference"
+                            name={"citation_reference."+(index+1)}
                             content={citation.raw}
                         />
                     )}
@@ -120,7 +120,7 @@ const Layout = (props) => {
                     />
 
                     {articles.authors.map((authorin, index) =>
-                        <meta name="citation_author"
+                        <meta name={"citation_author."+(index+1)}
                               content={authorin.author.first_name + " " + (authorin.author.middle_name && (authorin.author.middle_name + " ")) + authorin.author.last_name}/>
                     )}
                     <meta name="citation_title" content={articles.tr_title}/>
@@ -149,11 +149,10 @@ const Layout = (props) => {
 
                     {articles.citations.map((citation, index) =>
                         <meta
-                            name="citation_reference"
+                            name={"citation_reference."+(index+1)}
                             content={citation.raw}
                         />
                     )}
-
 
                     <meta
                         id="meta_stats_updated_at"
