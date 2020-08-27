@@ -27,8 +27,7 @@ const CourseDetails = (props) => {
 
                             <p className="course-details__author">
                                 Yazar(lar): {articles.authors.map((authorin, index) =>
-                                <a href="#">{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{" "}
-                                </a>
+                                <a href="#">{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{" "}</a>
                             )}
                             </p>
 

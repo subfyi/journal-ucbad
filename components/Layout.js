@@ -77,7 +77,7 @@ const Layout = (props) => {
                     <meta
                         name="DC.Subject"
                         xmlLang="tr"
-                        content={(articles.keywords).filter(a => a.keyword.type == "tr").map(a => <>{a.keyword.value}, </>)}
+                        content={(articles.keywords).filter(a => a.keyword.type == "tr").map(a => a.keyword.value).join(", ")}
                     />
 
                     <meta name="DC.Type"
@@ -98,8 +98,8 @@ const Layout = (props) => {
                           content={articles.updated_at}/>
 
                     {articles.authors.map((authorin, index) =>
-                        <meta name="DC.Creator.PersonalName"
-                              content={authorin.author.first_name + " " + (authorin.author.middle_name && (authorin.author.middle_name + " ")) + authorin.author.last_name}/>
+                        <meta name={"DC.Creator.PersonalName."+(index+1)}
+                              content={authorin.author.first_name + " " + ((authorin.author.middle_name && (authorin.author.middle_name + " ")) || "") + authorin.author.last_name}/>
                     )}
 
                     <meta name="DC.Format" scheme="IMT" content="application/pdf"/>
@@ -139,12 +139,21 @@ const Layout = (props) => {
                     <meta
                         name="citation_keywords"
                         xmlLang="tr"
-                        content={(articles.keywords).filter(a => a.keyword.type == "tr").map(a => <>{a.keyword.value}, </>)}
+                        content={(articles.keywords).filter(a => a.keyword.type == "tr").map(a => a.keyword.value).join(", ")}
                     />
 
                     {articles.files.map((file, index) =>
                         <meta name="citation_pdf_url" content={file.file}/>
                     )}
+
+
+                    {articles.citations.map((citation, index) =>
+                        <meta
+                            name="citation_reference"
+                            content={citation.raw}
+                        />
+                    )}
+
 
                     <meta
                         id="meta_stats_updated_at"
