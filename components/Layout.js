@@ -18,8 +18,26 @@ const Layout = (props) => {
 
                 {articles && <>
                     <base href="/"/>
-                    <meta name="generator" content="ucbad.com"/>
+                    <meta name="generator" content="Sub Network Solutions"/>
 
+                    <meta name="description" content={articles.tr_abstract}/>
+                    <meta name="keywords" content={(articles.keywords).filter(a => a.keyword.type == "tr").map(a => a.keyword.value).join(", ")}/>
+
+                    <meta property="og:type" content="website" />
+                    <meta name="og:title" property="og:title" content={articles.tr_title} />
+                    <meta name="og:description" property="og:description" content="" />
+                    <meta property="og:site_name" content="Ulusal Çevre Bilimleri Araştırma Dergisi"/>
+                    <meta property="og:url" content={"https://ucbad.com/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}/>
+                    <meta property="og:image" content="/favicon/android-icon-192x192.png"/>
+
+                    <meta name="twitter:card" content="summary" />
+                    <meta name="twitter:title" content={articles.tr_title} />
+                    <meta name="twitter:description" content={articles.tr_abstract}/>
+                    <meta name="twitter:site" content="Ulusal Çevre Bilimleri Araştırma Dergisi"/>
+                    <meta name="twitter:creator" content="Sub Network Solutions" />
+                    <meta name="twitter:image" content="/favicon/android-icon-192x192.png"/>
+
+                    <link rel="canonical" href={"https://ucbad.com/volume/" + articles.volume + "/issue/" + articles.issue + "/article/" + articles.order_num}/>
 
                     <link rel="schema.DC"
                           href="http://purl.org/dc/elements/1.1/"/>

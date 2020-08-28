@@ -36,7 +36,7 @@ export default class Courses extends React.Component {
 
         return (
             <Layout
-                pageTitle={"Cilt " + volume + " Sayı " + issue+ " Makale " + article  + " | UCBAD " }
+                pageTitle={articles.tr_title + " | UCBAD " }
                 articles={articles}
                 volume={volume}
                 issue={issue}
