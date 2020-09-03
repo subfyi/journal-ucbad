@@ -8,22 +8,22 @@ const Faq = (props) => {
             <div className="container">
                 <div className="row no-gutters">
                     <div className="col-md-6 text-center align-items-center ">
-                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.pdf"}><a>
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.pdf"}><a target="_blank">
                             <img src={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.png"} alt="" width="50%"/>
                         </a></Link>
                     </div>
 
                     <div className="col-md-6 text-left ">
-                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.pdf"}><a target="_blank" className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
                             KAPAK
                         </a></Link>
-                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-00-00-01.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-00-00-01.pdf"}><a target="_blank" className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
                             EDİTÖRLER
                         </a></Link>
-                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-00-00-02.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-00-00-02.pdf"}><a target="_blank" className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
                             HAKKINDA
                         </a></Link>
-                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-03.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-03.pdf"}><a target="_blank" className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
                             İÇERİK
                         </a></Link>
                     </div>
@@ -40,7 +40,7 @@ const Faq = (props) => {
                                         <h2 className="faq-one__title">{row.tr_title}</h2>
                                         <p className="faq-one__text">
                                             {row.authors.map((authorin, index) =>
-                                                <>  {authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "}</>
+                                                <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "}</>
                                             )}
                                         </p>
                                     </div>
