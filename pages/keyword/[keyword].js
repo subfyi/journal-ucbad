@@ -31,10 +31,10 @@ export default class extends React.Component {
         const {articles, keyword} = this.props;
 
         return (
-            <Layout pageTitle={"Keyword" + keyword + " | UCBAD "}>
+            <Layout pageTitle={"Anahtar Kelime " + keyword + " | UCBAD "}>
                 <Topbar/>
                 <NavOne/>
-                <PageHeader title={"Keyword" + keyword}/>
+                <PageHeader title={"Anahtar Kelime " + keyword}/>
                 <Faq
                     articles={articles}
                     keyword={keyword}
