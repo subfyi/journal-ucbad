@@ -7,6 +7,7 @@ import Faq from "../../../../../components/Faq";
 import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../api";
 import Topbar from "../../../../../components/Topbar";
+import Courses from "../../../../../components/Courses";
 
 export default class YearList extends React.Component {
     state = {}
@@ -19,7 +20,9 @@ export default class YearList extends React.Component {
 
     static async getInitialProps({ query }) {
         var articles = await api("/api/articles?page=1&itemPerPage=-1&sort=order_num&desc=false&journal=UCBAD&volume=" + query.id + "&issue=" + query.issue);
+        var volumes = await api("/api/volumes?page=1&itemPerPage=-1&sort=id&desc=true&journal=UCBAD");
         return {
+            volumes: volumes,
             articles: articles,
             volume: query.id,
             issue: query.issue,
@@ -27,7 +30,7 @@ export default class YearList extends React.Component {
     }
 
     render() {
-        const {articles, volume, issue} = this.props;
+        const {articles, volumes, volume, issue} = this.props;
 
         return (
             <Layout pageTitle={"Cilt " + volume + " Sayı " + issue  + " | UCBAD "}>
@@ -38,6 +41,7 @@ export default class YearList extends React.Component {
                     articles={articles}
                     volume={volume}
                     issue={issue}
+                    volumes={volumes}
                 />
                 <Footer/>
             </Layout>);

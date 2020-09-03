@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import Link from 'next/link';
 
 class NavOne extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
-          sticky: false
+            sticky: false
         };
     }
-    componentDidMount(){
+
+    componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
 
         //Mobile Menu
@@ -22,15 +23,15 @@ class NavOne extends Component {
 
     handleScroll = () => {
 
-      if (window.scrollY > 70) {
-        this.setState({
-            sticky: false
-        });
-      } else if (window.scrollY < 70) {
-        this.setState({
-            sticky: false
-        });
-      }
+        if (window.scrollY > 70) {
+            this.setState({
+                sticky: false
+            });
+        } else if (window.scrollY < 70) {
+            this.setState({
+                sticky: false
+            });
+        }
 
     }
 
@@ -40,7 +41,7 @@ class NavOne extends Component {
         let mainNav = document.querySelector(".main-navigation");
 
         mainNavToggler.addEventListener("click", function () {
-            mainNav.style.display = ( (mainNav.style.display != "block" ? "block" : "none" ) );
+            mainNav.style.display = ((mainNav.style.display != "block" ? "block" : "none"));
         });
     }
 
@@ -72,7 +73,7 @@ class NavOne extends Component {
                             <Link href="/">
                                 <a className="navbar-brand">
                                     <img src="/logo_black_500x500.png" className="main-logo" width="100"
-                                         alt="UCBAD" /> <h1>UCBAD</h1>
+                                         alt="UCBAD"/> <h1>UCBAD</h1>
                                 </a>
                             </Link>
                             <div className="header__social">
@@ -84,7 +85,7 @@ class NavOne extends Component {
                         </div>
                         <div className="main-navigation">
                             <ul className=" navigation-box">
-                                <li className="current">
+                                <li>
                                     <Link href="/"><a>Anasayfa</a></Link>
                                 </li>
                                 <li>

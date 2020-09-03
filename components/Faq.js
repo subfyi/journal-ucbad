@@ -1,11 +1,37 @@
 import React from 'react';
 import Link from "next/link";
+import moment from "moment";
 
 const Faq = (props) => {
     return (
         <section className="faq-one">
             <div className="container">
                 <div className="row no-gutters">
+                    <div className="col-md-6 text-center align-items-center ">
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.pdf"}><a>
+                            <img src={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.png"} alt="" width="50%"/>
+                        </a></Link>
+                    </div>
+
+                    <div className="col-md-6 text-left ">
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-00.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                            KAPAK
+                        </a></Link>
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-00-00-01.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                            EDİTÖRLER
+                        </a></Link>
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-00-00-02.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                            HAKKINDA
+                        </a></Link>
+                        <Link href={"/doc/ucbad-" + moment(props.year).format("YY") + "-0" + props.issue + "-00-03.pdf"}><a className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                            İÇERİK
+                        </a></Link>
+                    </div>
+
+                    <div className="col-lg-12">
+                        <br/>
+                    </div>
+
                     {props.articles.data.map((row, i) => <>
                         <div className="col-lg-12" key={row.id}>
                             <div className="faq-one__single">
@@ -17,17 +43,14 @@ const Faq = (props) => {
                                                 <>  {authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name},{" "}</>
                                             )}
                                         </p>
-
-
                                     </div>
                                 </a></Link>
                             </div>
                             <div className="faq-one__icon">
                                 <Link href={"/volume/" + row.volume + "/issue/" + row.issue + "/article/" + row.order_num}>
-
-                                <a className="btn btn-outline-dark text-secondary mx-4 ">
-                                    Sayfa: {row.first_page}-{row.last_page}
-                                </a></Link>
+                                    <a className="btn btn-outline-dark text-secondary mx-4 ">
+                                        Sayfa: {row.first_page}-{row.last_page}
+                                    </a></Link>
                             </div>
                         </div>
                     </>)}
