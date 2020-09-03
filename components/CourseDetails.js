@@ -89,7 +89,7 @@ const CourseDetails = (props) => {
                                 <a target="_blank" href={file.file} className="thm-btn course-details__price-btn">Dergipark [PDF]</a>
                             )}
 
-                            <a target="_blank" href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-0" + article + ".pdf"}
+                            <a target="_blank" href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + (article > 9 ? "-" : "-0") + article + ".pdf"}
                                className="thm-btn course-details__price-btn">UCBAD [PDF]</a>
 
                         </div>
