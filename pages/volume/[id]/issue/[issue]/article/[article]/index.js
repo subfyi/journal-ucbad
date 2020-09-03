@@ -28,7 +28,7 @@ export default class Courses extends React.Component {
     }
 
     render() {
-        const {articles, volume, issue, years, article} = this.props;
+        const {articles, volume, issue, article} = this.props;
 
         if (!articles) {
             return <div>404</div>

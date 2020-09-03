@@ -27,7 +27,7 @@ const CourseDetails = (props) => {
 
                             <p className="course-details__author">
                                 Yazar(lar): {articles.authors.map((authorin, index) =>
-                                <a href="#">{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{" "}</a>
+                                <a href={"/author/" + authorin.author.id}>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{" "}</a>
                             )}
                             </p>
 
@@ -47,11 +47,11 @@ const CourseDetails = (props) => {
 
                                     <p className="course-details__tab-text">
                                         {articles.tr_abstract}
-
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
-                                        Anahtar Kelime(ler): {(articles.keywords).filter(a => a.keyword.type == "tr").map(a => <>{a.keyword.value}, </>)}
+                                        Anahtar Kelime(ler): {(articles.keywords).filter(a => a.keyword.type == "tr").map(a =>
+                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.value},{" "}</a>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
@@ -61,8 +61,10 @@ const CourseDetails = (props) => {
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
-                                        Keyword(s): {(articles.keywords).filter(a => a.keyword.type == "en").map(a => <a>{a.keyword.value}</a>)}
+                                        Keyword(s): {(articles.keywords).filter(a => a.keyword.type == "en").map(a =>
+                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.value},{" "}</a>)}
                                     </p>
+
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="review">
 
@@ -82,9 +84,14 @@ const CourseDetails = (props) => {
                     <div className="col-lg-4">
                         <div className="course-details__price">
                             <p className="course-details__price-text">Tam Metin </p>
+
                             {articles.files.map((file, index) =>
-                                <a target="_blank" href={file.file} className="thm-btn course-details__price-btn">[PDF]</a>
+                                <a target="_blank" href={file.file} className="thm-btn course-details__price-btn">Dergipark [PDF]</a>
                             )}
+
+                            <a target="_blank" href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-0" + article + ".pdf"}
+                               className="thm-btn course-details__price-btn">UCBAD [PDF]</a>
+
                         </div>
 
                         <div className="course-details__meta">
@@ -126,7 +133,7 @@ const CourseDetails = (props) => {
                                         .join(" , ")
                                     }. ({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma
                                     Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
-                                    {" "} Retrieved from {"http://ucbad.com/volume/" + volume + "/issue/" + issue + "/article/" + article}
+                                    {" "} Retrieved from {"/volume/" + volume + "/issue/" + issue + "/article/" + article}
                                 </p>
                             </div>
                         </div>
@@ -140,7 +147,7 @@ const CourseDetails = (props) => {
                                 <p>
                                     @article{"{"}{moment(articles.pubdate).format("YYYY")}, title={"{"}{articles.tr_title}{"}"}, volume={"{"}{volume}{"}"}, number={"{"}{issue}{"}"},
                                     publisher={"{"}Ulusal Çevre Bilimleri Araştırma Dergisi{"}"}, author={"{"}{articles.authors.map((authorin, i, arr) =>
-                                    <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length-1) ? ', ' : ''}</>
+                                    <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length - 1) ? ', ' : ''}</>
                                 )}{"}"}, year={"{"}{moment(articles.pubdate).format("YYYY")}{"}"}, pages={"{"}{articles.first_page}-{articles.last_page}{"}"} {"}"}
 
                                 </p>
@@ -154,7 +161,7 @@ const CourseDetails = (props) => {
                                 </a>
                                 <p>
                                     {articles.authors.map((authorin, i, arr) =>
-                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length-1) ? ', ' : ''}</>
+                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length - 1) ? ', ' : ''}</>
                                     )}. {articles.tr_title}. no. {volume} Ulusal Çevre Bilimleri Araştırma Dergisi, ({moment(articles.pubdate).format("YYYY")}),
                                     pp. {articles.first_page}-{articles.last_page}.
 

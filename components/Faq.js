@@ -7,7 +7,7 @@ const Faq = (props) => {
             <div className="container">
                 <div className="row no-gutters">
                     {props.articles.data.map((row, i) => <>
-                        <div className="col-lg-6" key={row.id}>
+                        <div className="col-lg-12" key={row.id}>
                             <div className="faq-one__single">
                                 <Link href={"/volume/" + row.volume + "/issue/" + row.issue + "/article/" + row.order_num}><a>
                                     <div className="faq-one__content">
@@ -18,16 +18,15 @@ const Faq = (props) => {
                                             )}
                                         </p>
 
-                                        <a className="btn btn-outline-dark text-secondary mx-4 ">
-                                            Sayfa: {row.first_page}-{row.last_page}
-                                        </a>
-                                        {row.files.map((file, index) =>
-                                            <a className="btn btn-danger obj_galley_link file" href={file.file}
-                                                aria-labelledby="article-137">
-                                                Tam Metin [PDF]
-                                            </a>
-                                        )}
+
                                     </div>
+                                </a></Link>
+                            </div>
+                            <div className="faq-one__icon">
+                                <Link href={"/volume/" + row.volume + "/issue/" + row.issue + "/article/" + row.order_num}>
+
+                                <a className="btn btn-outline-dark text-secondary mx-4 ">
+                                    Sayfa: {row.first_page}-{row.last_page}
                                 </a></Link>
                             </div>
                         </div>
