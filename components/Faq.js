@@ -15,27 +15,26 @@ const Faq = (props) => {
                         </div>
                         <div className="col-md-6 text-left ">
                             <Link href={"/doc/ucbad-" + moment(props.volumes.data[0].year).format("YY") + "-0" + props.issue + "-00-00.pdf"}><a target="_blank"
-                                                                                                                                                 className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
-                                COVER
+                                                                                                                                                className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                                KAPAK
                             </a></Link>
-                            <Link href={"/doc/ucbad-" + moment(props.volumes.data[0].year).format("YY") + "-00-00-01" + (props.volumes.data[0].special && 1 ? "-s": "") + ".pdf"}><a target="_blank"
+                            <Link href={"/doc/ucbad-" + moment(props.volumes.data[0].year).format("YY") + "-00-00-01" + (props.volumes.data[0].special && 1 ? "-s" : "") + ".pdf"}><a target="_blank"
                                                                                                                                                                                       className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
-                                EDITORS
+                                EDİTÖRLER
                             </a></Link>
                             <Link href={"/doc/ucbad-" + moment(props.volumes.data[0].year).format("YY") + "-00-00-02.pdf"}><a target="_blank"
-                                                                                                                               className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
-                                ABOUT
+                                                                                                                              className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                                HAKKINDA
                             </a></Link>
                             <Link href={"/doc/ucbad-" + moment(props.volumes.data[0].year).format("YY") + "-0" + props.issue + "-00-03.pdf"}><a target="_blank"
-                                                                                                                                                 className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
-                                CONTENTS
+                                                                                                                                                className="col-md-6 mb-5 btn btn-outline-dark text-secondary mx-4 ">
+                                İÇERİK
                             </a></Link>
                         </div>
                         <div className="col-lg-12">
                             <br/>
                         </div>
                     </>}
-
                     {props.articles.data.map((row, i) => <>
                         <div className="col-lg-12" key={row.id}>
                             <div className="faq-one__single">
