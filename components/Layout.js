@@ -89,6 +89,7 @@ const Layout = (props) => {
                           xmlLang="tr"
                           content={articles.tr_abstract}/>
                     <meta name="DC.Source" content="Ulusal Çevre Bilimleri Araştırma Dergisi"/>
+                    <meta name="DC.Source.ISSN" content="2618-6128"/>
                     <meta name="DC.Source.Issue" content={issue}/>
                     <meta name="DC.Source.URI" content="https://ucbad.com/"/>
                     <meta name="DC.Source.Volume" content={volume}/>
@@ -145,6 +146,7 @@ const Layout = (props) => {
 
                     <meta name="citation_date" content={moment(articles.pubdate).format("DD-MM-YYYY")}/>
                     <meta name="citation_publication_date" content={moment(articles.pubdate).format("DD-MM-YYYY")}/>
+                    <meta name="citation_issn" content="2618-6128"/>
                     <meta name="citation_volume" content={volume}/>
                     <meta name="citation_issue" content={issue}/>
                     <meta name="citation_firstpage" content={articles.first_page}/>

@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import AboutTwo from "../components/AboutTwo";
 import AboutOne from "../components/AboutOne";
 
-
 const HomePage = () => (
 
     <Layout pageTitle="Ulusal Çevre Bilimleri Araştırma Dergisi | UCBAD">
