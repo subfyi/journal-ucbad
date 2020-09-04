@@ -7,7 +7,6 @@ import Faq from "../../../../../components/Faq";
 import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../../api";
 import Topbar from "../../../../../components/Topbar";
-import Courses from "../../../../../components/Courses";
 
 export default class YearList extends React.Component {
     state = {}
