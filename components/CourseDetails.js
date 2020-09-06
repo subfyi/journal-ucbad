@@ -27,7 +27,7 @@ const CourseDetails = (props) => {
 
                             <p className="course-details__author">
                                 Yazar(lar): {articles.authors.map((authorin, index) =>
-                                <a href={"/author/" + authorin.author.id}>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{" "}</a>
+                                <a href={"/author/" + authorin.author.id + "/"}>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{" "}</a>
                             )}
                             </p>
 
@@ -51,7 +51,7 @@ const CourseDetails = (props) => {
                                     <br/><br/>
                                     <p className="course-details__author">
                                         Anahtar Kelime(ler): {(articles.keywords).filter(a => a.keyword.type == "tr").map(a =>
-                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.name},{" "}</a>)}
+                                        <a href={"/keyword/" + a.keyword.id + "/"}>{a.keyword.name},{" "}</a>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
@@ -61,7 +61,7 @@ const CourseDetails = (props) => {
                                     <br/><br/>
                                     <p className="course-details__author">
                                         Keyword(s): {(articles.keywords).filter(a => a.keyword.type == "en").map(a =>
-                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.name},{" "}</a>)}
+                                        <a href={"/keyword/" + a.keyword.id + "/"}>{a.keyword.name},{" "}</a>)}
                                     </p>
 
                                 </div>
