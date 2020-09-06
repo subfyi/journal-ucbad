@@ -112,38 +112,31 @@ const CourseDetails = (props) => {
                             </a>
                         </div>
 
-                        <>
-                            <div className="course-details__price">
-
-                                <div className=" text-center align-items-center">
-
-                                    <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}><a target="_blank">
-                                        <img className="w-100 mb-3" src={require("../public/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.png")}
-                                             alt="volume image"/>
+                        <div className="course-details__price">
+                            <div className=" text-center align-items-center">
+                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}><a target="_blank">
+                                    <img className="w-100 mb-3" src={require("../public/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.png")}
+                                         alt="volume image"/>
+                                </a></Link>
+                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}>
+                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
+                                        KAPAK
+                                    </a></Link>
+                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-01.pdf"}>
+                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
+                                        EDİTÖRLER
+                                    </a></Link>
+                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-02.pdf"}>
+                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
+                                        HAKKINDA
+                                    </a></Link>
+                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-03.pdf"}>
+                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
+                                        İÇERİK
                                     </a></Link>
 
-                                    <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}>
-                                        <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                            COVER
-                                        </a></Link>
-
-                                    <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-01.pdf"}>
-                                        <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                            EDITORS
-                                        </a></Link>
-                                    <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-02.pdf"}>
-                                        <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                            ABOUT
-                                        </a></Link>
-                                    <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-03.pdf"}>
-                                        <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                            CONTENTS
-                                        </a></Link>
-
-                                </div>
                             </div>
-                        </>
-
+                        </div>
                     </div>
                     <div className="col-lg-12">
                         <br/>
