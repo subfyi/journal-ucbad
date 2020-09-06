@@ -114,26 +114,25 @@ const CourseDetails = (props) => {
 
                         <div className="course-details__price">
                             <div className=" text-center align-items-center">
-                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}><a target="_blank">
+                                <a target="_blank" href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}>
                                     <img className="w-100 mb-3" src={require("../public/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.png")}
                                          alt="volume image"/>
-                                </a></Link>
-                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}>
-                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                        KAPAK
-                                    </a></Link>
-                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-01" + (articles.volumes.special && 1 ? "-s" : "") + ".pdf"}>
-                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                        EDİTÖRLER
-                                    </a></Link>
-                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-02.pdf"}>
-                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                        HAKKINDA
-                                    </a></Link>
-                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-03.pdf"}>
-                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
-                                        İÇERİK
-                                    </a></Link>
+                                </a>
+                                <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
+                                   href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-00.pdf"}>
+                                    KAPAK
+                                </a>
+                                <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
+                                   href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-01" + (articles.volumes.special && 1 ? "-s" : "") + ".pdf"}>
+                                    EDİTÖRLER
+                                </a>
+                                <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3" href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-02.pdf"}>
+                                    HAKKINDA
+                                </a>
+                                <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
+                                   href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-0" + issue + "-00-03.pdf"}>
+                                    İÇERİK
+                                </a>
                             </div>
                         </div>
                     </div>
