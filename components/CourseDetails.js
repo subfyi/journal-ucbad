@@ -51,18 +51,17 @@ const CourseDetails = (props) => {
                                     <br/><br/>
                                     <p className="course-details__author">
                                         Anahtar Kelime(ler): {(articles.keywords).filter(a => a.keyword.type == "tr").map(a =>
-                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.value},{" "}</a>)}
+                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.name},{" "}</a>)}
                                     </p>
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
                                     <p className="course-details__tab-text">
                                         {articles.en_abstract}
-
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
                                         Keyword(s): {(articles.keywords).filter(a => a.keyword.type == "en").map(a =>
-                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.value},{" "}</a>)}
+                                        <a href={"/keyword/" + a.keyword.id}>{a.keyword.name},{" "}</a>)}
                                     </p>
 
                                 </div>
