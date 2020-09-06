@@ -19,6 +19,18 @@ const TeachersDetails = () => {
                                 <br/>
                             </p>
                             <hr/>
+                            <h3 className="team-details__subtitle">EDİTÖR YARDIMCISI</h3>
+                            <p>
+                                Ms. Zeynep Cansu Ayturan
+                                <br/>
+                                Konya Teknik Üniversitesi
+                                <br/>
+                                Çevre Mühendisliği Bölümü, Mühendislik ve Doğa Bilimleri Fakültesi
+                                <br/>
+                                Konya, Türkiye
+                                <br/>
+                            </p>
+                            <hr/>
                             <h3 className="team-details__subtitle">EDİTORYAL DANIŞMA KURULU</h3>
                             <p>
                                 Dr. Bahtiyar Öztürk
@@ -145,18 +157,6 @@ const TeachersDetails = () => {
                                 Mersin Üniversitesi / Mühendislik Fakültesi
                                 <br/>
                                 Mersin , Türkiye
-                                <br/>
-                            </p>
-                            <hr/>
-                            <h3 className="team-details__subtitle">EDİTÖR YARDIMCISI</h3>
-                            <p>
-                                Ms. Zeynep Cansu Ayturan
-                                <br/>
-                                Konya Teknik Üniversitesi
-                                <br/>
-                                Çevre Mühendisliği Bölümü, Mühendislik ve Doğa Bilimleri Fakültesi
-                                <br/>
-                                Konya, Türkiye
                                 <br/>
                             </p>
 
