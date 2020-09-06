@@ -122,7 +122,7 @@ const CourseDetails = (props) => {
                                     <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
                                         KAPAK
                                     </a></Link>
-                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-01.pdf"}>
+                                <Link href={"/doc/ucbad-" + moment(articles.pubdate).format("YY") + "-00-00-01" + (articles.volumes.special && 1 ? "-s" : "") + ".pdf"}>
                                     <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
                                         EDİTÖRLER
                                     </a></Link>
@@ -134,7 +134,6 @@ const CourseDetails = (props) => {
                                     <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3">
                                         İÇERİK
                                     </a></Link>
-
                             </div>
                         </div>
                     </div>
