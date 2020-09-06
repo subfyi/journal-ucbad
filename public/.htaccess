@@ -4,4 +4,3 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^sitemap(.*?).xml$ https://api.ucbad.com/sitemap/ucbad$1.xml [p,l,E=Proxy-Host:api.ucbad.com]
 RewriteRule (.*) http://127.0.0.1:7424/$1 [p]
-
