@@ -35,5 +35,5 @@ Redirect 301 /about https://ucbad.com/editorial-team
 Redirect 301 /ucbad https://ucbad.com/
 Redirect 301 /ijepem https://ijepem.com/
 
-RewriteRule ^sitemap(.*?).xml$ https://api.ucbad.com/sitemap/sitemap$1.xml [p,l,E=Proxy-Host:api.ucbad.com]
+RewriteRule ^sitemap(.*?).xml$ https://api.ucbad.com/sitemap/ucbad$1.xml [p,l,E=Proxy-Host:api.ucbad.com]
 RewriteRule (.*) http://127.0.0.1:7424/$1 [p]
