@@ -151,12 +151,14 @@ const CourseDetails = (props) => {
                                     Atıf tipi: <span>APA</span>
                                 </a>
                                 <p>
-                                    {articles.authors
-                                        .map(a => a.author.last_name + ", " + a.author.first_name.split(' ').map(a => a[0]).join(', ') + " ")
-                                        .join(" , ")
-                                    }. ({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma
-                                    Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
-                                    {" "} Retrieved from {"https://ucbad.com/volume-" + volume + "/issue-" + issue + "/article-" + article + "/"}
+                                    <code>
+                                        {articles.authors
+                                            .map(a => a.author.last_name + ", " + a.author.first_name.split(' ').map(a => a[0]).join(', ') + " ")
+                                            .join(" , ")
+                                        }. ({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma
+                                        Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
+                                        {" "} Retrieved from {"https://ucbad.com/volume-" + volume + "/issue-" + issue + "/article-" + article + "/"}
+                                    </code>
                                 </p>
                             </div>
                         </div>
@@ -168,11 +170,12 @@ const CourseDetails = (props) => {
                                     Atıf tipi: <span>BibTex</span>
                                 </a>
                                 <p>
-                                    @article{"{"}{moment(articles.pubdate).format("YYYY")}, title={"{"}{articles.tr_title}{"}"}, volume={"{"}{volume}{"}"}, number={"{"}{issue}{"}"},
-                                    publisher={"{"}Ulusal Çevre Bilimleri Araştırma Dergisi{"}"}, author={"{"}{articles.authors.map((authorin, i, arr) =>
-                                    <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length - 1) ? ', ' : ''}</>
-                                )}{"}"}, year={"{"}{moment(articles.pubdate).format("YYYY")}{"}"}, pages={"{"}{articles.first_page}-{articles.last_page}{"}"} {"}"}
-
+                                    <code>
+                                        @article{"{"}{moment(articles.pubdate).format("YYYY")}, title={"{"}{articles.tr_title}{"}"}, volume={"{"}{volume}{"}"}, number={"{"}{issue}{"}"},
+                                        publisher={"{"}Ulusal Çevre Bilimleri Araştırma Dergisi{"}"}, author={"{"}{articles.authors.map((authorin, i, arr) =>
+                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length - 1) ? ', ' : ''}</>
+                                    )}{"}"}, year={"{"}{moment(articles.pubdate).format("YYYY")}{"}"}, pages={"{"}{articles.first_page}-{articles.last_page}{"}"} {"}"}
+                                    </code>
                                 </p>
                             </div>
                         </div>
@@ -183,11 +186,12 @@ const CourseDetails = (props) => {
                                     Atıf tipi: <span>MLA</span>
                                 </a>
                                 <p>
-                                    {articles.authors.map((authorin, i, arr) =>
-                                        <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length - 1) ? ', ' : ''}</>
-                                    )}. {articles.tr_title}. no. {volume} Ulusal Çevre Bilimleri Araştırma Dergisi, ({moment(articles.pubdate).format("YYYY")}),
-                                    pp. {articles.first_page}-{articles.last_page}.
-
+                                    <code>
+                                        {articles.authors.map((authorin, i, arr) =>
+                                            <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name}{i != (arr.length - 1) ? ', ' : ''}</>
+                                        )}. {articles.tr_title}. no. {volume} Ulusal Çevre Bilimleri Araştırma Dergisi, ({moment(articles.pubdate).format("YYYY")}),
+                                        pp. {articles.first_page}-{articles.last_page}.
+                                    </code>
                                 </p>
                             </div>
                         </div>
