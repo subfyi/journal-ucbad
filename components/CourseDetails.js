@@ -156,7 +156,7 @@ const CourseDetails = (props) => {
                                         .join(" , ")
                                     }. ({moment(articles.pubdate).format("YYYY")}). {articles.tr_title}. Ulusal Çevre Bilimleri Araştırma
                                     Dergisi, {volume + " ( " + issue + " ) "}, {articles.first_page}-{articles.last_page}.
-                                    {" "} Retrieved from {"/volume/" + volume + "/issue/" + issue + "/article/" + article}
+                                    {" "} Retrieved from {"/volume-" + volume + "/issue-" + issue + "/article-" + article}
                                 </p>
                             </div>
                         </div>
