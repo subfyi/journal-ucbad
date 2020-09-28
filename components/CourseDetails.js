@@ -55,7 +55,7 @@ const CourseDetails = (props) => {
                                 </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
                                     <p className="course-details__tab-text">
-                                        {articles.article_infos.find(el => el.lang_id == 1).abstract}
+                                        {articles.article_infos.find(el => el.lang_id == 1) && articles.article_infos.find(el => el.lang_id == 1).abstract}
                                     </p>
                                     <br/><br/>
                                     <p className="course-details__author">
