@@ -12,7 +12,7 @@ const Courses = (props) => {
                             <Link href={"/volume-" + row.volume + "/issue-" + row.issue + "/"}><a>
                                 <div className="course-one__single">
                                     <div className="course-one__image">
-                                        <img src={require("../public/doc/ucbad-" + moment(row.year).format("YY") + "-0" + row.issue + "-00-00.png?resize&size=270")}
+                                        <img src={require("../public/doc/ucbad-"+ moment(row.year).format("YY") +"-0" + row.issue + "-00-00.png?resize&size=270")}
                                              alt="volume image"/>
                                     </div>
                                     <div className="course-one__content">
@@ -20,7 +20,7 @@ const Courses = (props) => {
                                         <h2 className="course-one__title">{"Cilt " + row.volume + " Sayı " + row.issue}
                                         </h2>
                                         <div className="course-one__meta">
-                                            <a href="#"><i className="far fa-calendar"></i> {moment(row.year).format("DD.MM.YYYY")} </a>{" "}
+                                            <a href="#"><i className="far fa-calendar"></i> {moment(row.year).format("DD.MM.YYYY")}</a>{" "}
                                             <a href="#"><i className="far fa-folder-open"></i> {row.articles.length} Makale</a>
                                         </div>
                                     </div>

@@ -21,7 +21,7 @@ export default class Courses extends React.Component {
         const id = query.volume.split('-').slice(-1)[0]
         const issue = query.issue.split('-').slice(-1)[0]
         const article = query.article.split('-').slice(-1)[0]
-        var articles = await api("/api/articles?page=1&itemPerPage=-1&journal=UCBAD&volume=" + id + "&issue=" + issue + "&article=" + article);
+        var articles = await api("/api/articles?page=1&itemPerPage=-1&journal_id=2&volume=" + id + "&issue=" + issue + "&article=" + article);
         return {
             articles: articles.data[0],
             volume: id,
@@ -39,7 +39,7 @@ export default class Courses extends React.Component {
 
         return (
             <Layout
-                pageTitle={articles.tr_title + " | UCBAD "}
+                pageTitle={articles.article_infos.find(el => el.lang_id == articles.primary_language).title + " | UCBAD "}
                 articles={articles}
                 volume={volume}
                 issue={issue}

@@ -18,7 +18,7 @@ export default class YearList extends React.Component {
     }
 
     static async getInitialProps() {
-        var volumes = await api("/api/volumes?page=1&itemPerPage=-1&sort=id&desc=true&journal=UCBAD");
+        var volumes = await api("/api/volumes?page=1&itemPerPage=-1&sort=id&desc=true&journal_id=2");
         return {
             volumes: volumes,
         };
@@ -27,7 +27,7 @@ export default class YearList extends React.Component {
     render() {
         const {volumes} = this.props;
 
-    return (
+        return (
         <Layout pageTitle="Ciltler | UCBAD">
             <Topbar/>
             <NavOne />

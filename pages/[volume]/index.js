@@ -17,26 +17,27 @@ export default class YearList extends React.Component {
         this.validator = new SimpleReactValidator()
     }
 
-    static async getInitialProps({query}) {
+    static async getInitialProps({ query }) {
         const id = query.volume.split('-').slice(-1)[0]
-        var volumes = await api('/api/volumes?page=1&itemPerPage=-1&sort=id&desc=true&journal=UCBAD&volume=' + id)
+        var volumes = await api('/api/volumes?page=1&itemPerPage=-1&sort=id&desc=true&journal_id=2&volume=' + id)
         return {
             volumes: volumes
         }
     }
 
     render() {
-        const {volumes} = this.props
+        const { volumes } = this.props
 
         return (
             <Layout pageTitle="Ciltler | UCBAD">
-                <Topbar/>
-                <NavOne/>
-                <PageHeader title="Ciltler"/>
+                <Topbar />
+                <NavOne />
+                <PageHeader title="Ciltler" />
                 <Courses
                     volumes={volumes}
                 />
-                <Footer/>
+                <Footer />
             </Layout>)
     }
 }
+
