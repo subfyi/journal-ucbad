@@ -27,7 +27,7 @@ const TeachersPage = () => {
                                     Telif Hakkı Formu Dosyası Tüm Yazarlar Tarafından İmzalanmalı ve Dergipark Sistemine Yüklenmelidir.
 
                                 </p>
-                                <p><a href="https://ucbad.com/doc/ucbad-telif-hakki-formu.pdf"> Telif Hakkı Formu Dosyası ( https://ucbad.com/doc/ucbad-telif-hakki-formu.pdf )</a></p>
+                                <p><a href="https://ucbad.com/doc/ucbad-copyright.pdf"> Telif Hakkı Formu Dosyası ( https://ucbad.com/doc/ucbad-copyright.pdf )</a></p>
 
 
                             </div>
