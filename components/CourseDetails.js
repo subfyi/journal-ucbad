@@ -55,6 +55,17 @@ const CourseDetails = (props) => {
                                     </p>
                                 </div>
 
+                                <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
+                                    <p className="course-details__tab-text">
+                                        {articles.article_infos.find(el => el.lang_id == 1) && articles.article_infos.find(el => el.lang_id == 1).abstract.replace(/(<([^>]+)>)/gi, "").replace(/[\r\n]/g, ' ')}
+                                    </p>
+                                    <br/><br/>
+                                    <p className="course-details__author">
+                                        Keyword(s):
+                                        {(articles.keywords).filter(a => a.keyword.lang_id == 1).map(a =>
+                                            <a href={'/keyword/' + a.keyword.id + '/'}>{a.keyword.name},{' '}</a>)}
+                                    </p>
+                                </div>
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="review">
 
                                     <ul className="course-details__curriculum-list list-unstyled">
