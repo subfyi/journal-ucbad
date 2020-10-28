@@ -15,6 +15,7 @@ const GalleryPage = () => {
             <PageHeader title="İletişim" />
             <Contact />
             <ContactForm/>
+            <SubscribeOne />
             <Footer />
         </Layout>
     );

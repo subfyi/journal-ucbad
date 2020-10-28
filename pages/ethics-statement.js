@@ -94,6 +94,7 @@ const TeachersPage = () => {
                     </div>
                 </div>
             </section>
+            <SubscribeOne />
             <Footer/>
         </Layout>
     );

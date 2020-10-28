@@ -13,6 +13,7 @@ const TeachersPage = () => {
             <NavOne />
             <PageHeader title="Amaç ve Kapsam" />
             <Teachers />
+            <SubscribeOne />
             <Footer />
         </Layout>
     );

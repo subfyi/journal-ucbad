@@ -2,7 +2,9 @@ import React from 'react'
 import moment from 'moment'
 
 const CourseDetails = (props) => {
-    const {articles, volume, volumes, issue, article} = props
+    const { articles, volume, volumes, issue, article } = props
+
+    const primary_article = articles.article_infos.find(el => el.lang_id == articles.primary_language);
 
     return (
         <section className="course-details">
@@ -14,7 +16,7 @@ const CourseDetails = (props) => {
 
                             <div className="course-details__top">
                                 <div className="course-details__top-left">
-                                    <h2 className="course-details__title">{articles.article_infos.find(el => el.lang_id == articles.primary_language).title}
+                                    <h2 className="course-details__title">{primary_article.title}
                                     </h2>
                                 </div>
                             </div>
@@ -43,27 +45,16 @@ const CourseDetails = (props) => {
                             <div className="tab-content course-details__tab-content ">
                                 <div className="tab-pane show active  animated fadeInUp" role="tabpanel" id="overview">
                                     <p className="course-details__tab-text">
-                                        {articles.article_infos.find(el => el.lang_id == articles.primary_language).abstract}
+                                        {articles.article_infos.find(el => el.lang_id == articles.primary_language).abstract.replace(/(<([^>]+)>)/gi, "").replace(/[\r\n]/g, ' ')}
 
                                     </p>
-                                    <br/><br/>
+                                    <br /><br />
                                     <p className="course-details__author">
-                                        Anahtar Kelime(ler):
-                                        {(articles.keywords).filter(a => a.keyword.lang_id == articles.primary_language).map(a =>
-                                            <a href={'/keyword/' + a.keyword.id + '/'}>{a.keyword.name},{' '}</a>)}
+                                        Anahtar Kelime(ler): {(articles.keywords).map(a =>
+                                        <a href={'/keyword/' + a.keyword.id + '/'}>{a.keyword.name},{' '}</a>)}
                                     </p>
                                 </div>
-                                <div className="tab-pane  animated fadeInUp" role="tabpanel" id="curriculum">
-                                    <p className="course-details__tab-text">
-                                        {articles.article_infos.find(el => el.lang_id == 1) && articles.article_infos.find(el => el.lang_id == 1).abstract}
-                                    </p>
-                                    <br/><br/>
-                                    <p className="course-details__author">
-                                        Keyword(s):
-                                        {(articles.keywords).filter(a => a.keyword.lang_id == 1).map(a =>
-                                            <a href={'/keyword/' + a.keyword.id + '/'}>{a.keyword.name},{' '}</a>)}
-                                    </p>
-                                </div>
+
                                 <div className="tab-pane  animated fadeInUp" role="tabpanel" id="review">
 
                                     <ul className="course-details__curriculum-list list-unstyled">
@@ -112,8 +103,7 @@ const CourseDetails = (props) => {
                         <div className="course-details__price">
                             <div className=" text-center align-items-center">
                                 <a target="_blank" href={'/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-0' + issue + '-00-00.pdf'}>
-                                    <img className="w-100 mb-3" src={require('../public/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-0' + issue + '-00-00.png?resize&size=270')}
-                                         alt="volume image"/>
+                                    <img className="w-100 mb-3" src={require('../public/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-0' + issue + '-00-00.png?resize&size=270')} alt="volume image" />
                                 </a>
                                 <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
                                    href={'/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-0' + issue + '-00-00.pdf'}>
@@ -135,7 +125,7 @@ const CourseDetails = (props) => {
                     </div>
 
                     <div className="col-lg-12">
-                        <br/>
+                        <br />
                     </div>
 
                     <div className="col-lg-12 blog-one__content">

@@ -7,6 +7,7 @@ import SimpleReactValidator from "simple-react-validator";
 import api from "../../../../api";
 import Footer from "../../../../components/Footer";
 import Topbar from "../../../../components/Topbar";
+import Seo from '../../../../components/Common/Seo'
 
 export default class Courses extends React.Component {
     state = {}
@@ -39,12 +40,33 @@ export default class Courses extends React.Component {
 
         return (
             <Layout
-                pageTitle={articles.article_infos.find(el => el.lang_id == articles.primary_language).title + " | UCBAD "}
                 articles={articles}
                 volume={volume}
                 issue={issue}
                 article={article}
             >
+                <Seo
+                    title={(articles.article_infos.find(el => el.lang_id == articles.primary_language).title + ' | UCBAD ' || '').substr(0, 70) + '...'}
+                    description={(articles.article_infos.find(el => el.lang_id == articles.primary_language).abstract || '').replace(/[\r\n]/g, ' ')}
+                    keywords={(articles.keywords).filter(a => a.keyword.type == 'en').map(a => a.keyword.value).join(', ')}
+
+                    openGraph={{
+                        title: articles.article_infos.find(el => el.lang_id == articles.primary_language).title + ' | UCBAD ',
+                        description: (articles.article_infos.find(el => el.lang_id == articles.primary_language).abstract.replace(/(<([^>]+)>)/gi, "") || '').replace(/[\r\n]/g, ' '),
+                        url: process.env.DOMAIN + '/volume-' + articles.volume + '/issue-' + articles.issue + '/article-' + articles.order_num + '/',
+                        type: 'article',
+                        article: {
+                            publishedTime: articles.pubdate,
+                            modifiedTime: articles.updated_at,
+                            section: 'Volume ' + articles.volume + ' Issue ' + articles.issue + ' Article ' + articles.order_num,
+                            authors:
+                                articles.authors.map((authorin, index) =>
+                                    process.env.DOMAIN + '/author/' + authorin.author.id + '/'
+                                ),
+                            tags: (articles.keywords).map(a => a.keyword.name)
+                        },
+                    }}
+                />
                 <Topbar/>
                 <NavOne/>
                 <PageHeader title={"Cilt " + volume + " Sayı " + issue + " Makale " + article}/>

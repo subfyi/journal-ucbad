@@ -9,33 +9,18 @@ const Layout = (props) => {
         <div>
             <Head>
 
-                <title>{pageTitle}</title>
+                {!articles && <title>{pageTitle}</title>}
 
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+                <meta name="generator" content="Sub Network Solutions" />
 
 
                 {articles && <>
-                    <base href="/" />
-                    <meta name="generator" content="Sub Network Solutions" />
 
-                    <meta name="description" content={articles.article_infos.find(el => el.lang_id == articles.primary_language).abstract} />
-                    <meta name="keywords" content={(articles.keywords).map(a => a.keyword.name).join(', ')} />
-
-                    <meta property="og:type" content="website" />
-                    <meta name="og:title" property="og:title" content={articles.article_infos.find(el => el.lang_id == articles.primary_language).title} />
-                    <meta name="og:description" property="og:description" content="" />
                     <meta property="og:site_name" content="International Journal of Environmental Pollution and Environmental Modelling" />
-                    <meta property="og:url" content={process.env.DOMAIN + '/volume-' + articles.volume + '/issue-' + articles.issue + '/article-' + articles.order_num + '/'} />
                     <meta property="og:image" content="/favicon/android-icon-192x192.png" />
-
-                    <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:title" content={articles.article_infos.find(el => el.lang_id == articles.primary_language).title} />
-                    <meta name="twitter:description" content={articles.article_infos.find(el => el.lang_id == articles.primary_language).abstract} />
-                    <meta name="twitter:site" content="International Journal of Environmental Pollution and Environmental Modelling" />
-                    <meta name="twitter:creator" content="Sub Network Solutions" />
-                    <meta name="twitter:image" content="/favicon/android-icon-192x192.png" />
 
                     <link rel="canonical" href={process.env.DOMAIN + '/volume-' + articles.volume + '/issue-' + articles.issue + '/article-' + articles.order_num + '/'} />
 
@@ -201,6 +186,12 @@ const Layout = (props) => {
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/css/responsive.css'} />
 
             </Head>
+            <DefaultSeo
+                titleTemplate={"%s | UCBAD"}
+                title="Ulusal Çevre Bilimleri Araştırma Dergisi"
+                description={'Ulusal Çevre Bilimleri Araştırma Dergisi (UCBAD), ISSN-2636-7483' || ''}
+                keywords={'Çevre Bilimleri, Çevre Mühendisliği, Çevre Modellemesi, Dergi, Hakemli Dergi'}
+            />
 
 
             <div className="page-wrapper">

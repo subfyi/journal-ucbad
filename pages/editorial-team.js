@@ -13,6 +13,7 @@ const TeachersDetailsPage = () => {
             <NavOne />
             <PageHeader title="Editör Kurulu" />
             <TeachersDetails />
+            <SubscribeOne />
             <Footer />
         </Layout>
     );
