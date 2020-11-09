@@ -31,8 +31,8 @@ export default class YearList extends React.Component {
         return (
             <Layout>
                 <Seo
-                    title="Ciltler | IJEPEM"
-                    description={"IJEPEM dergi ciltler" || ""}
+                    title="Ciltler"
+                    description={"UCBAD dergi ciltler" || ""}
                     keywords={"ciltler" || ""}
                 />
                 <Topbar/>
