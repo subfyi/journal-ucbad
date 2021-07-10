@@ -21,7 +21,7 @@ const TeachersDetails = () => {
                             <hr/>
                             <h3 className="team-details__subtitle">EDİTÖR YARDIMCISI</h3>
                             <p>
-                                Ms. Zeynep Cansu Ayturan
+                                Dr. Zeynep Cansu Ayturan
                                 <br/>
                                 Konya Teknik Üniversitesi
                                 <br/>
