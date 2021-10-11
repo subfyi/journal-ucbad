@@ -77,8 +77,8 @@ class NavOne extends Component {
                                 </a>
                             </Link>
                             <div className="header__social">
-                                <a target="_blank" href="https://www.facebook.com/ucbad"><i className="fab fa-facebook-square"></i></a>
                                 <Link href="/indexes/"><a><i className="fas fa-book"></i></a></Link>
+                                <Link href="/history/"><a><i className="fas fa-history"></i></a></Link>
                             </div>
                             <button className="menu-toggler">
                                 <span className="kipso-icon-menu"></span>

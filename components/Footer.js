@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 
 const Footer = () => {
 
@@ -21,7 +22,7 @@ const Footer = () => {
                                         </li>
                                         <li>
                                             <h2>Yayın Aralığı</h2>
-                                            <p>yılda 4 sayı</p>
+                                            <p>yılda 2 sayı</p>
                                         </li>
                                         <li>
                                             <h2>Anahtar başlığı</h2>
@@ -73,7 +74,7 @@ const Footer = () => {
                 </div>
                 <div className="site-footer__bottom">
                     <div className="container">
-                        <p className="site-footer__copy">&copy; Copyright 2020 by <a target="_blank" href="https://sub.fyi/">Sub.fyi</a></p>
+                        <p className="site-footer__copy">&copy; Copyright 2021 by <a target="_blank" href="https://sub.fyi/">Sub.fyi</a></p>
                         <div className="site-footer__social">
 
                             <div onClick={scrollTop} className="scroll-to-target site-footer__scroll-top"><i
@@ -81,6 +82,8 @@ const Footer = () => {
 
 
                             <a target="_blank" href="https://www.facebook.com/ucbad"><i className="fab fa-facebook-square"></i></a>
+                            <Link href="/indexes/"><a><i className="fas fa-book"></i></a></Link>
+                            <Link href="/history/"><a><i className="fas fa-history"></i></a></Link>
                         </div>
                     </div>
                 </div>
