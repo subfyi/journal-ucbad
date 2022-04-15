@@ -37,7 +37,7 @@ const TeachersPage = () => {
                     <td><b>2018</b>  (Cilt 1 Sayı 1, Cilt 1 Sayı 2, Cilt 1 Sayı 3, Cilt 1 Sayı 4)</td>
                   </tr>
                   <tr>
-                    <td>Zeynep Cansu Ayturan<br/>
+                    <td><em>Kurucu </em>: Zeynep Cansu Ayturan
 
                     </td>
                   </tr>
@@ -102,7 +102,7 @@ const TeachersPage = () => {
                     <td><b>2019</b>  (Cilt 2 Sayı 1, Cilt 2 Sayı 2, Cilt 2 Sayı 3, Cilt 2 Sayı 4)</td>
                   </tr>
                   <tr>
-                    <td>Zeynep Cansu Ayturan<br/>
+                    <td><em>Dergi sahibi </em>: Zeynep Cansu Ayturan
 
                     </td>
                   </tr>
@@ -168,7 +168,7 @@ const TeachersPage = () => {
                     <td><b>2020</b>  (Cilt 3 Sayı 1, Cilt 3 Sayı 2, Cilt 3 Sayı 3, Cilt 3 Sayı 4)</td>
                   </tr>
                   <tr>
-                    <td>Zeynep Cansu Ayturan<br/>
+                    <td><em>Dergi sahibi </em>: Zeynep Cansu Ayturan
 
                     </td>
                   </tr>
@@ -234,7 +234,7 @@ const TeachersPage = () => {
                     <td><b>2021</b>  (Cilt 4 Sayı 1, Cilt 4 Sayı 2)</td>
                   </tr>
                   <tr>
-                    <td>Zeynep Cansu Ayturan<br/>
+                    <td><em>Dergi sahibi </em>: Zeynep Cansu Ayturan
 
                     </td>
                   </tr>
@@ -300,7 +300,7 @@ const TeachersPage = () => {
                     <td><b>2022</b>  (Cilt 5 Sayı 1)</td>
                   </tr>
                   <tr>
-                    <td>Zeynep Cansu Ayturan<br/>
+                    <td><em>Dergi sahibi </em>: Zeynep Cansu Ayturan
 
                     </td>
                   </tr>
