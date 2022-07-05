@@ -120,17 +120,7 @@ const CourseDetails = (props) => {
                                    href={'/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-0' + issue + '-00-00.pdf'}>
                                     KAPAK
                                 </a>
-                                <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
-                                   href={'/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-00-00-01' + (articles.volumes.special && 1 ? '-s' : '') + '.pdf'}>
-                                    EDİTÖRLER
-                                </a>
-                                <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3" href={'/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-00-00-02.pdf'}>
-                                    HAKKINDA
-                                </a>
-                                <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
-                                   href={'/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-0' + issue + '-00-03.pdf'}>
-                                    İÇERİK
-                                </a>
+
                             </div>
                         </div>
                     </div>

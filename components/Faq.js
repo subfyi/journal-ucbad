@@ -47,20 +47,8 @@ const Faq = (props) => {
                                              alt="volume image" />
                                     </a>
                                     <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
-                                       href={'/doc/ucbad-' + moment(props.volumes.data[0].year).format('YY') + '-0' + props.issue + '-00-00.pdf'}>
+                                       href={'/doc/ucbad-' + moment(props.volumes.data[0].year).format('YY') + '-0' + props.issue + '-00-00.png'}>
                                         KAPAK
-                                    </a>
-                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
-                                       href={'/doc/ucbad-' + moment(props.volumes.data[0].year).format('YY') + '-00-00-01' + (props.volumes.data[0].special && 1 ? '-s' : '') + '.pdf'}>
-                                        EDİTÖRLER
-                                    </a>
-                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
-                                       href={'/doc/ucbad-' + moment(props.volumes.data[0].year).format('YY') + '-00-00-02.pdf'}>
-                                        HAKKINDA
-                                    </a>
-                                    <a target="_blank" className="btn btn-outline-dark text-secondary col-md-12 mb-3"
-                                       href={'/doc/ucbad-' + moment(props.volumes.data[0].year).format('YY') + '-0' + props.issue + '-00-03.pdf'}>
-                                        İÇERİK
                                     </a>
                                 </div>
                             </div>
