@@ -24,10 +24,9 @@ const CourseDetails = (props) => {
                     </div>
                     <div className="col-lg-8">
                         <div className="course-details__content">
-
                             <p className="course-details__author">
                                 Yazar(lar): {articles.authors.map((authorin, index) =>
-                                <a href={'/author/' + authorin.author.id + '/'}>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{' '}</a>
+                                <>{authorin.author.first_name} {authorin.author.middle_name} {authorin.author.last_name} <sup>{index + 1}</sup>,{' '}</>
                             )}
                             </p>
 
@@ -51,7 +50,7 @@ const CourseDetails = (props) => {
                                     <br /><br />
                                     <p className="course-details__author">
                                         Anahtar Kelime(ler): {(articles.keywords).map(a =>
-                                        <a href={'/keyword/' + a.keyword.id + '/'}>{a.keyword.name},{' '}</a>)}
+                                        <>{a.keyword.name},{' '}</>)}
                                     </p>
                                 </div>
 

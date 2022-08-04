@@ -5,8 +5,6 @@ import NavOne from '../components/NavOne'
 import Footer from '../components/Footer'
 import AboutTwo from '../components/AboutTwo'
 import AboutOne from '../components/AboutOne'
-import SubscribeOne from '../components/SubscribeOne'
-
 
 const HomePage = () => (
 
@@ -15,7 +13,6 @@ const HomePage = () => (
         <NavOne />
         <AboutOne />
         <AboutTwo />
-        <SubscribeOne />
         <Footer />
     </Layout>
 
