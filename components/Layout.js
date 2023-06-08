@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import moment from 'moment'
 import { DefaultSeo } from "next-seo"
+import '@fortawesome/fontawesome-free/css/all.css'
 
 const Layout = (props) => {
     const { articles, volume, issue, article, pageTitle } = props
@@ -16,149 +16,6 @@ const Layout = (props) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <meta name="generator" content="Sub Network Solutions" />
-
-
-                {articles && <>
-
-                    <meta property="og:site_name" content="International Journal of Environmental Pollution and Environmental Modelling" />
-                    <meta property="og:image" content="/favicon/android-icon-192x192.png" />
-
-                    <link rel="canonical" href={process.env.DOMAIN + '/volume-' + articles.volume + '/issue-' + articles.issue + '/article-' + articles.order_num + '/'} />
-
-                    <link rel="schema.DC"
-                          href="http://purl.org/dc/elements/1.1/" />
-
-                    <meta name="DC.Contributor.Sponsor"
-                          xmlLang="tr"
-                          content />
-
-                    <meta
-                        content={articles.updated_at}
-                        property="article:modified_time"
-                    />
-                    <meta
-                        content="article"
-                        property="og:type" />
-                    <meta
-                        content={articles.article_infos.find(el => el.lang_id == articles.primary_language).title}
-                        property="og:title"
-                    />
-
-                    <meta
-                        content={'https://ucbad.com/doc/ucbad-' + moment(articles.pubdate).format('YY') + '-0' + issue + (article > 9 ? '-' : '-0') + article + '.pdf'}
-                        property="og:url" />
-
-
-                    {articles.citations.map((citation, index) =>
-                        <meta
-                            name={'citation_reference.' + (index + 1)}
-                            content={citation.raw}
-                        />
-                    )}
-
-
-                    <meta name="DC.Title"
-                          content={articles.article_infos.find(el => el.lang_id == articles.primary_language).title}
-                    />
-                    <meta name="DC.Description"
-                          xmlLang="tr"
-                          content={articles.article_infos.find(el => el.lang_id == articles.primary_language).abstract} />
-                    <meta name="DC.Source" content="International Journal of Environmental Pollution and Environmental Modelling" />
-                    <meta name="DC.Source.ISSN" content="2618-6128" />
-                    <meta name="DC.Source.Issue" content={issue} />
-                    <meta name="DC.Source.URI" content={process.env.DOMAIN} />
-                    <meta name="DC.Source.Volume" content={volume} />
-                    <meta
-                        name="DC.Subject"
-                        xmlLang="tr"
-                        content={(articles.keywords).map(a => a.keyword.name).join(', ')}
-                    />
-
-                    <meta name="DC.Type"
-                          content="Text.Serial.Journal" />
-                    <meta name="DC.Type.articleType"
-                          content="article" />
-                    <meta name="DC.Date.created"
-                          scheme="ISO8601"
-                          content={articles.created_at} />
-                    <meta name="DC.Date.dateSubmitted"
-                          scheme="ISO8601"
-                          content={moment(articles.submission_date).format('DD-MM-YYYY')} />
-                    <meta name="DC.Date.issued"
-                          scheme="ISO8601"
-                          content={moment(articles.created_at).format('DD-MM-YYYY')} />
-                    <meta name="DC.Date.modified"
-                          scheme="ISO8601"
-                          content={articles.updated_at} />
-
-                    {articles.authors.map((authorin, index) =>
-                        <meta name={'DC.Creator.PersonalName.' + (index + 1)}
-                              content={authorin.author.first_name + ' ' + ((authorin.author.middle_name && (authorin.author.middle_name + ' ')) || '') + authorin.author.last_name} />
-                    )}
-
-                    <meta name="DC.Format" scheme="IMT" content="application/pdf" />
-
-                    <meta name="DC.Identifier" content={articles.volume + articles.issue + articles.order_num + '/'} />
-                    <meta name="DC.Identifier.pageNumber" content={articles.first_page + '-' + articles.last_page} />
-                    <meta
-                        name="DC.Identifier.URI"
-                        content={process.env.DOMAIN + '/volume-' + articles.volume + '/issue-' + articles.issue + '/article-' + articles.order_num + '/'}
-                    />
-                    <meta name="DC.Language" content='tr scheme="ISO639-1"' />
-
-                    <meta name="gs_meta_revision" content="1.1" />
-
-                    <meta
-                        name="citation_journal_title"
-                        content="International Journal of Environmental Pollution and Environmental Modelling"
-                    />
-
-                    {articles.authors.map((authorin, index) =>
-                        <meta name={'citation_author.' + (index + 1)}
-                              content={authorin.author.first_name + ' ' + (authorin.author.middle_name && (authorin.author.middle_name + ' ')) + authorin.author.last_name} />
-                    )}
-                    <meta name="citation_title" content={articles.article_infos.find(el => el.lang_id == articles.primary_language).title} />
-
-                    <meta name="citation_date" content={moment(articles.pubdate).format('DD-MM-YYYY')} />
-                    <meta name="citation_publication_date" content={moment(articles.pubdate).format('DD-MM-YYYY')} />
-                    <meta name="citation_issn" content="2618-6128" />
-                    <meta name="citation_volume" content={volume} />
-                    <meta name="citation_issue" content={issue} />
-                    <meta name="citation_firstpage" content={articles.first_page} />
-                    <meta name="citation_lastpage" content={articles.last_page} />
-                    <meta
-                        name="citation_abstract_html_url"
-                        content={process.env.DOMAIN + '/volume-' + articles.volume + '/issue-' + articles.issue + '/article-' + articles.order_num + '/'}
-                    />
-                    <meta name="citation_language" content="tr" />
-                    <meta
-                        name="citation_keywords"
-                        xmlLang="tr"
-                        content={(articles.keywords).map(a => a.keyword.name).join(', ')}
-                    />
-
-                    {articles.files.map((file, index) =>
-                        <meta name="citation_pdf_url" content={file.file} />
-                    )}
-
-
-                    {articles.citations.map((citation, index) =>
-                        <meta
-                            name={'citation_reference.' + (index + 1)}
-                            content={citation.citation.raw}
-                        />
-                    )}
-
-                    <meta
-                        id="meta_stats_updated_at"
-                        name="stats_updated_at"
-                        content={articles.updated_at}
-                    />
-
-                    <meta name="DC.Language" scheme="ISO639-1" content="tr" />
-                    <meta name="DC.Rights" content={process.env.DOMAIN + '/doc/ucbad-copyright.pdf'} />
-
-                </>}
 
                 <link rel="apple-touch-icon" sizes="57x57" href={process.env.DOMAIN + '/favicon/apple-icon-57x57.png'} />
                 <link rel="apple-touch-icon" sizes="60x60" href={process.env.DOMAIN + '/favicon/apple-icon-60x60.png'} />
@@ -181,7 +38,6 @@ const Layout = (props) => {
                 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800%7CSatisfy&display=swap" rel="stylesheet" />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/plugins/bootstrap/bootstrap.min.css'} />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/css/animate.min.css'} />
-                <link rel="stylesheet" href={process.env.DOMAIN + '/assets/plugins/fontawesome-free-5.11.2-web/css/all.min.css'} />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/plugins/kipso-icons/style.css'} />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/css/style.css'} />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/css/responsive.css'} />

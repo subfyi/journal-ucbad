@@ -72,7 +72,7 @@ class NavOne extends Component {
                         <div className="logo-box clearfix">
                             <Link href="/">
                                 <a className="navbar-brand">
-                                    <img src={require("../public//logo_black_500x500.png")} className="main-logo" width="100"
+                                    <img src={require("../public/logo_black_500x500.png")} className="main-logo" width="100"
                                          alt="UCBAD"/> <h1>UCBAD</h1>
                                 </a>
                             </Link>
