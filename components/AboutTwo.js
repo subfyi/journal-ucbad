@@ -26,7 +26,7 @@ export default class AboutTwo extends Component {
                                 <div className="about-one__text">
                                     <div className="about-two__single">
                                         <div className="about-two__single-icon">
-                                            <i className="kipso-icon-email"></i>
+                                            <i className="fas fa-envelope-open"></i>
                                         </div>
                                         <div className="about-two__single-content">
                                             <p className="about-two__single-text"> Online Gönderme Sistemi</p>
@@ -38,7 +38,7 @@ export default class AboutTwo extends Component {
                                     <br/>
                                     <div className="about-two__single">
                                         <div className="about-two__single-icon">
-                                            <i className="kipso-icon-professor"></i>
+                                            <i className="fas fa-rocket"></i>
                                         </div>
                                         <div className="about-two__single-content">
                                             <p className="about-two__single-text">
@@ -51,7 +51,7 @@ export default class AboutTwo extends Component {
                                     <br/>
                                     <div className="about-two__single">
                                         <div className="about-two__single-icon">
-                                            <i className="kipso-icon-knowledge"></i>
+                                            <i className="fas fa-newspaper"></i>
                                         </div>
                                         <div className="about-two__single-content">
                                             <p className="about-two__single-text">Sınırsız Alan İmkânı</p>

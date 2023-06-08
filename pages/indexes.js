@@ -21,11 +21,20 @@ const TeachersPage = () => {
                 <ul>
                   <li>
                     <a
-                      href="http://dergipark.gov.tr/ucbad"
+                      href="http://dergipark.org.tr/ucbad"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      http://dergipark.gov.tr/ucbad
+                      http://dergipark.org.tr/ucbad
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                        href="https://scholar.google.com.tr/citations?user=KjEU-k0AAAAJ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                      https://scholar.google.com.tr/citations?user=KjEU-k0AAAAJ
                     </a>
                   </li>
                   <li>
@@ -62,15 +71,6 @@ const TeachersPage = () => {
                       rel="noopener noreferrer"
                     >
                       http://road.issn.org/issn/2636-7483
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://scholar.google.com.tr/citations?user=KjEU-k0AAAAJ"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      https://scholar.google.com.tr/citations?user=KjEU-k0AAAAJ
                     </a>
                   </li>
                   <li>

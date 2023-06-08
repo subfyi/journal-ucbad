@@ -1,7 +1,7 @@
 import React from 'react'
+import '@fortawesome/fontawesome-free/css/all.css'
 import Head from 'next/head'
 import { DefaultSeo } from "next-seo"
-import '@fortawesome/fontawesome-free/css/all.css'
 
 const Layout = (props) => {
     const { articles, volume, issue, article, pageTitle } = props
@@ -38,7 +38,6 @@ const Layout = (props) => {
                 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800%7CSatisfy&display=swap" rel="stylesheet" />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/plugins/bootstrap/bootstrap.min.css'} />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/css/animate.min.css'} />
-                <link rel="stylesheet" href={process.env.DOMAIN + '/assets/plugins/kipso-icons/style.css'} />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/css/style.css'} />
                 <link rel="stylesheet" href={process.env.DOMAIN + '/assets/css/responsive.css'} />
 
@@ -52,14 +51,8 @@ const Layout = (props) => {
 
 
             <div className="page-wrapper">
-
                 {props.children}
-
             </div>
-
-            <script src="/assets/plugins/bootstrap/jquery.min.js"></script>
-            <script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
-
         </div>
     )
 }
