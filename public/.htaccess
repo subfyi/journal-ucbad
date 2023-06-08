@@ -20,6 +20,8 @@ RewriteRule ^article/view/volume-(\d+)/issue-(\d+)/article-(\d+) /volume-$1/issu
 
 RewriteRule ^ucbad/ethics-statement/(.*) /ethics-statement/$1 [R=301,L]
 
+RewriteRule ^volume-1/issue-1/article-1$ https://dergipark.org.tr/tr/pub/ucbad/issue/38456/445905 [R=301,L]
+
 RewriteRule ^editorial-board$ /editorial-team  [R=301,L]
 RewriteRule ^about/editorialTeam$ /editorial-team  [R=301,L]
 
@@ -27,17 +29,9 @@ RewriteRule ^ciltler$ /volumes  [R=301,L]
 RewriteRule ^sayilar$ /volumes  [R=301,L]
 RewriteRule ^issue/archive$ /volumes  [R=301,L]
 
-RewriteRule ^volume-1/issue-1/article-1$ https://dergipark.org.tr/tr/pub/ucbad/issue/38456/445905 [R=301,L]
-RewriteRule ^doc/ucbad-18-01-01.pdf$ https://dergipark.org.tr/tr/download/article-file/509911  [R=301,L]
-RewriteRule ^doc/ucbad-18-01-02.pdf$ https://dergipark.org.tr/tr/download/article-file/509897  [R=301,L]
-RewriteRule ^doc/ucbad-18-01-03.pdf$ https://dergipark.org.tr/tr/download/article-file/510169  [R=301,L]
-RewriteRule ^doc/ucbad-18-01-04.pdf$ https://dergipark.org.tr/tr/download/article-file/510175  [R=301,L]
-RewriteRule ^doc/ucbad-18-01-05.pdf$ https://dergipark.org.tr/tr/download/article-file/510198  [R=301,L]
-RewriteRule ^doc/ucbad-18-01-05.pdf$ https://dergipark.org.tr/tr/download/article-file/510201  [R=301,L]
-
 RewriteRule ^publisher$ /contact  [R=301,L]
 RewriteRule ^iletisim$ /contact  [R=301,L]
-RewriteRule ^about/contact$ /about/contact  [R=301,L]
+RewriteRule ^about/contact$ /contact  [R=301,L]
 
 RewriteRule ^online-submission$ https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new  [R=301,L]
 RewriteRule ^online-gonderi$ https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new  [R=301,L]
