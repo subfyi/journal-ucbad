@@ -78,7 +78,7 @@ const Footer = () => {
                         <div className="site-footer__social">
 
                             <div onClick={scrollTop} className="scroll-to-target site-footer__scroll-top"><i
-                                className="kipso-icon-top-arrow"></i></div>
+                                className="fas fa-arrow-up"></i></div>
 
                             <Link href="/indexes/"><a><i className="fas fa-book"></i></a></Link>
                             <Link href="/history/"><a><i className="fas fa-history"></i></a></Link>
