@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
                 <div className="site-footer__bottom">
                     <div className="container">
-                        <p className="site-footer__copy">&copy; Copyright 2021 by <a target="_blank" href="https://sub.fyi/">Sub.fyi</a></p>
+                        <p className="site-footer__copy">&copy; Copyright 2023 by <a target="_blank" href="https://sub.fyi/">Sub.fyi</a></p>
                         <div className="site-footer__social">
 
                             <div onClick={scrollTop} className="scroll-to-target site-footer__scroll-top"><i
