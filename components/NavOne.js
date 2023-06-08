@@ -90,7 +90,7 @@ class NavOne extends Component {
                                     <Link href="/"><a>Anasayfa</a></Link>
                                 </li>
                                 <li>
-                                    <a href="/volumes/">Ciltler</a>
+                                    <a href="https://dergipark.org.tr/tr/pub/ucbad/archive">Ciltler</a>
                                 </li>
                                 <li>
                                     <Link href="/editorial-team/"><a>Editör Kurulu</a></Link>

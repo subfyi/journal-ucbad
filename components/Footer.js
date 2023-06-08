@@ -64,7 +64,7 @@ const Footer = () => {
                                     <p className="footer-widget__text">Ulusal Çevre Bilimleri Araştırma Dergisi, 2018'den bu yana her üç ayda bir yayınlanan hakemli dergidir.
                                     </p>
                                     <div className="footer-widget__btn-block">
-                                        <a href="/volumes" className="thm-btn">Ciltler</a>
+                                        <a href="https://dergipark.org.tr/tr/pub/ucbad/archive" className="thm-btn">Ciltler</a>
                                         <a href="/contact" className="thm-btn">İletişim</a>
                                     </div>
                                 </div>
@@ -80,8 +80,6 @@ const Footer = () => {
                             <div onClick={scrollTop} className="scroll-to-target site-footer__scroll-top"><i
                                 className="kipso-icon-top-arrow"></i></div>
 
-
-                            <a target="_blank" href="https://www.facebook.com/ucbad"><i className="fab fa-facebook-square"></i></a>
                             <Link href="/indexes/"><a><i className="fas fa-book"></i></a></Link>
                             <Link href="/history/"><a><i className="fas fa-history"></i></a></Link>
                         </div>
