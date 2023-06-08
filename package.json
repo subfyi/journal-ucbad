@@ -3,7 +3,6 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "font-awesome": "^4.7.0",
-    "iban": "0.0.14",
     "lodash.debounce": "^4.0.8",
     "next": "^9.5.5",
     "next-compose-plugins": "^2.2.0",
@@ -21,8 +20,6 @@
     "react-transition-group": "^4.4.1",
     "reactstrap": "^8.6.0",
     "simple-react-validator": "^1.5.1",
-    "@zeit/next-sass": "^1.0.1",
-    "node-sass": "^4.13.1",
     "react-countdown": "^2.2.1",
     "react-countup": "^4.3.3",
     "react-id-swiper": "^3.0.0",
@@ -33,27 +30,12 @@
     "moment": "^2.26.0",
     "react-animated-css": "^1.2.1",
     "react-animations": "^1.0.0",
-    "react-lazyload": "^2.6.7",
-    "rss-parser": "^3.8.0",
-    "slug": "^3.3.0",
-    "string-strip-html": "^4.4.7",
-    "use-dark-mode": "^2.3.1"
+    "react-lazyload": "^2.6.7"
   },
   "description": "Master Journal List",
   "devDependencies": {
-    "image-trace-loader": "^1.0.2",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0",
-    "jimp": "^0.16.1",
-    "lqip-loader": "^2.2.1",
-    "prettier": "2.1.2",
-    "responsive-loader": "^2.2.0",
-    "sass": "^1.27.0",
-    "svg-sprite-loader": "^5.0.0",
-    "webp-loader": "^0.6.0",
-    "url-loader": "^4.1.0"
+    "responsive-loader": "^3.1.1",
+    "sass": "^1.56.1"
   },
   "keywords": [],
   "license": "UNLICENSED",
