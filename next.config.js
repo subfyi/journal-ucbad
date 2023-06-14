@@ -1,14 +1,11 @@
 const withOptimizedImages = require("next-optimized-images");
 module.exports = withOptimizedImages({
-    /* config for next-optimized-images */
-
-    // your config for other plugins or the general next.js here..
     async redirects() {
         return [
             {
                 "source": "/ucbad",
                 "destination": "https://ucbad.com/",
-                "permanent": true,
+                "permanent": true
             },
             {
                 "source": "/ijepem",
@@ -102,5 +99,4 @@ module.exports = withOptimizedImages({
         DOMAIN: 'https://ucbad.com',
     },
     trailingSlash: true,
-
 });
