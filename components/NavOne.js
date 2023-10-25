@@ -73,7 +73,7 @@ function NavOne() {
                             <a href="https://dergipark.org.tr/tr/pub/ucbad/page/12797"><i className="fas fa-history"></i></a>
                         </div>
                         <button className="menu-toggler">
-                            <span className="kipso-icon-menu"></span>
+                            <span className="fas fa-bars"></span>
                         </button>
                     </div>
                     <div className="main-navigation">
