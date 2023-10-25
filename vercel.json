@@ -2,93 +2,153 @@
   "version": 2,
   "redirects": [
     {
-      "source": "/ucbad",
+      "source": "/iseser/",
+      "destination": "https://iseser.com/",
+      "permanent": true
+    },
+    {
+      "source": "/ucbad/",
       "destination": "https://ucbad.com/",
       "permanent": true
     },
     {
-      "source": "/ijepem",
-      "destination": "https://ijepem.com/",
+      "source": "/ucbad/",
+      "destination": "https://ucbad.com/",
       "permanent": true
     },
     {
-      "source": "/editorial-board",
-      "destination": "/editorial-team",
+      "source": "/history/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/page/12117",
       "permanent": true
     },
     {
-      "source": "/about/editorialTeam",
-      "destination": "/editorial-team",
+      "source": "/indexes/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/indexes",
       "permanent": true
     },
     {
-      "source": "/publisher",
+      "source": "/aim-and-scope/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/aim-and-scope",
+      "permanent": true
+    },
+    {
+      "source": "/guide-for-authors/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/writing-rules",
+      "permanent": true
+    },
+    {
+      "source": "/ethics-statement/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/policy",
+      "permanent": true
+    },
+    {
+      "source": "/editorial-team/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/board",
+      "permanent": true
+    },
+    {
+      "source": "/editorial-board/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/board",
+      "permanent": true
+    },
+    {
+      "source": "/about/editorialTeam/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/board",
+      "permanent": true
+    },
+    {
+      "source": "/publisher/",
       "destination": "/contact",
       "permanent": true
     },
     {
-      "source": "/iletisim",
+      "source": "/iletisim/",
       "destination": "/contact",
       "permanent": true
     },
     {
-      "source": "/about/contact",
+      "source": "/about/contact/",
       "destination": "/contact",
       "permanent": true
     },
     {
-      "source": "/about",
+      "source": "/about/",
       "destination": "/editorial-team",
       "permanent": true
     },
     {
-      "source": "/online-submission",
+      "source": "/online-submission/",
+      "destination": "https://dergipark.org.tr/tr/journal/2661/submission/step/manuscript/new",
+      "permanent": true
+    },
+    {
+      "source": "/online-gonderi/",
       "destination": "https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new",
       "permanent": true
     },
     {
-      "source": "/online-gonderi",
+      "source": "/about/submissions/",
       "destination": "https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new",
       "permanent": true
     },
     {
-      "source": "/about/submissions",
-      "destination": "https://dergipark.org.tr/tr/journal/2662/submission/step/manuscript/new",
+      "source": "/volumes/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
       "permanent": true
     },
     {
-      "source": "/volumes",
-      "destination": "https://dergipark.org.tr/tr/pub/ucbad/issue/38456",
+      "source": "/volume/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
       "permanent": true
     },
     {
-      "source": "/volume",
-      "destination": "https://dergipark.org.tr/tr/pub/ucbad/issue/38456",
+      "source": "/cilt/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
       "permanent": true
     },
     {
-      "source": "/ciltler",
-      "destination": "https://dergipark.org.tr/tr/pub/ucbad/issue/38456",
+      "source": "/ciltler/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
       "permanent": true
     },
     {
-      "source": "/sayilar",
-      "destination": "https://dergipark.org.tr/tr/pub/ucbad/issue/38456",
+      "source": "/sayilar/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
       "permanent": true
     },
     {
-      "source": "/issue/archive",
-      "destination": "https://dergipark.org.tr/tr/pub/ucbad/issue/38456",
+      "source": "/issue/archive/",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
       "permanent": true
     },
     {
-      "source": "/volume-1/issue-1",
-      "destination": "https://dergipark.org.tr/tr/pub/ucbad/issue/38456",
+      "source": "/volume-1/:path*",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
       "permanent": true
     },
     {
-      "source": "/volume-1/issue-1/article-1",
-      "destination": "https://dergipark.org.tr/tr/pub/ucbad/issue/38456/445905",
+      "source": "/volume-2/:path*",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
+      "permanent": true
+    },
+    {
+      "source": "/volume-3/:path*",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
+      "permanent": true
+    },
+    {
+      "source": "/volume-4/:path*",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
+      "permanent": true
+    },
+    {
+      "source": "/volume-5/:path*",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad/archive",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "https://dergipark.org.tr/tr/pub/ucbad",
       "permanent": true
     }
   ]

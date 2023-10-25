@@ -7,43 +7,45 @@ const Teachers = () => {
                 <div className="row justify-content-between">
                     <div className="col-lg-12">
                         <div className="team-details__content">
-                            <h3 className="team-details__subtitle">Amaç ve Kapsam</h3>
+                            <h3 className="team-details__subtitle">Aim and Scope</h3>
                             <p>
-                                Ulusal Çevre Bilimleri Araştırma Dergisi, deneysel ve teorik açıdan gözden geçirilmiş özgün araştırma makalelerini aşağıdaki alanlarda yayınlayan ulusal bir dergidir:
-                                  </p>
+                                International Journal of Environmental Pollution and Environmental Modelling is an international journal that publishes reviewed original research papers of both experimental and theoretical nature in the following areas:
+
+                            </p>
                             <hr/>
-                            <h3 className="team-details__subtitle">Kapsam</h3>
+                            <h3 className="team-details__subtitle">Subjects</h3>
                             <ul>
                                 <li>
-                                    Belediye ve Endüstriyel Katı Atıklar</li><li>
-                                    Atık Bertarafı ve Yönetimi</li><li>
-                                    Çevre Kirliliği</li><li>
-                                    Çevresel Modellemesi</li><li>
-                                    Çevresel Yazılım</li><li>
-                                    Çevre Bilimi</li><li>
-                                    Çevresel Eğitim</li><li>
-                                    Çevre Kimyası</li><li>
-                                    Çevresel Mikrobiyoloji</li><li>
-                                    Çevresel Sağlık</li><li>
-                                    Biyokütle, Tarımsal Kalıntılar</li><li>
-                                    Ekoloji</li><li>
-                                    Yenilenebilir Enerji Kaynakları</li><li>
-                                    Tehlikeli Emisyonlar, Yakma</li><li>
-                                    Çevresel Koruma Konuları, Deneysel, Analitik, Endüstriyel Çalışmalar</li><li>
-                                    Hidrolojik Geri Dönüşüm</li><li>
-                                    İçme Suyu Arıtımı</li><li>
-                                    Atıksu Arıtma</li><li>
-                                    Hava Kirliliği</li><li>
-                                    Gaz Bertarafı</li><li>
-                                    Gürültü Kirliliği ve Kontrolü</li><li>
-                                    Çevre Bilimlerinde Bulanık Mantık</li><li>
-                                    Yapay Sinir Ağları</li><li>
-                                    Deprem Çevresel Etkileri
-                            </li>
+                                Municipal and Industrial Solid Wastes and Waste Disposal, Management</li><li>
+                                Environmental Pollution</li><li>
+                                Environmental Modeling</li><li>
+                                Environmental Modeling and Software</li><li>
+                                Environmental Science</li><li>
+                                Environmental Education</li><li>
+                                Environmental Chemistry</li><li>
+                                Environmental Microbiology</li><li>
+                                Environmental Health</li><li>
+                                Environmental Economics</li><li>
+                                Climate Change</li><li>
+                                Biomass, Agricultural Residues</li><li>
+                                Ecology</li><li>
+                                Renewable Energy Sources</li><li>
+                                Hazardous Emissions, Incineration</li><li>
+                                Environmental Protection Topics included experimental, analytical, industrial studies</li><li>
+                                Hydrological Recycling</li><li>
+                                Drinking Water Treatment</li><li>
+                                Waste Water Treatment</li><li>
+                                Air Pollution</li><li>
+                                Gas Removal and Disposal</li><li>
+                                Noise Pollution and Control</li><li>
+                                Fuzzy Logic in Environmental Sciences</li><li>
+                                Artificial Neural Networks</li><li>
+                                Earthquake Environmental Effects</li>
                             </ul>
 
-                            <p>Çevre yönetimi ve hava, su ve arazi kaynaklarının kullanımı ile ilgili diğer konularda da yayın kabul edilmektedir.
+                            <p>
 
+                                Suitable topics are also included regarding the efficient environmental management and use of air, water and land resources.
                             </p>
 
 

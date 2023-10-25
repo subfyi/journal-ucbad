@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ucbad.com/sitemap_index.xml
+Sitemap: https://ucbad.com/sitemap.xml
