@@ -46,7 +46,7 @@ export default function Footer() {
                                         </li>
                                         <li>
                                             <h2>Website</h2>
-                                            <p>https://ucbad.com</p>
+                                            <p>https://dergipark.org.tr/tr/pub/ucbad</p>
                                         </li>
                                         <li>
                                             <h2>Yayıncı</h2>
