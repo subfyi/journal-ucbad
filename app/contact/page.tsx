@@ -7,8 +7,10 @@ import ContactForm from "@/components/ContactForm";
 const metaTitle = 'Contact'
 export const metadata = {
     title: metaTitle + ' | UCBAD',
+    description: 'İletişim için buradan bize ulaşabilirsiniz.',
     openGraph: {
-        title: metaTitle + ' | UCBAD'
+        title: metaTitle + ' | UCBAD',
+        description: 'İletişim için buradan bize ulaşabilirsiniz.',
     }
 }
 export default function Page() {
