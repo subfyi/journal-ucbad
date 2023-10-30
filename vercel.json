@@ -22,8 +22,8 @@
       "statusCode": 301
     },
     {
-      "source": "/ucbad/",
-      "destination": "https://ucbad.com/",
+      "source": "/ijepem/",
+      "destination": "https://ijepem.com/",
       "statusCode": 301
     },
     {
