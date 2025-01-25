@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import circle from '../assets/images/circle-stripe.png';
+import Image from "next/image";
 
 class AboutOne extends Component {
     constructor(){
@@ -17,7 +19,7 @@ class AboutOne extends Component {
     render() {
         return (
             <section className="about-one ">
-                <img src="assets/images/circle-stripe.png" className="about-one__circle" alt="" />
+                <Image src={circle} className="about-one__circle" alt="" />
                     <div className="container text-center">
                         <div className="block-title text-center">
                             <h2 className="block-title__title">Ulusal Çevre Bilimleri Araştırma Dergisi </h2>
